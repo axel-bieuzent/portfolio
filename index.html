@@ -5,13 +5,12 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Axel Bieuzent — Portfolio Commercial</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,400&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
 :root {
   --bg:      #080808;
   --bg2:     #0f0f0f;
   --bg3:     #161616;
-  --bg4:     #1d1d1d;
   --green:   #7B8C58;
   --green-l: #98AB70;
   --green-d: #5A6840;
@@ -47,23 +46,23 @@ nav {
   display: flex; align-items: center; justify-content: space-between;
 }
 .nav-logo {
-  font-family: 'Playfair Display', serif;
-  font-size: 1.2rem; font-weight: 700;
+  font-family: 'Outfit', sans-serif;
+  font-size: 1rem; font-weight: 600;
   color: var(--white);
   text-decoration: none;
-  letter-spacing: 1px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
 }
 .nav-logo span { color: var(--green-l); }
 .nav-links { display: flex; list-style: none; gap: 2px; }
 .nav-links a {
-  display: block; padding: 8px 15px;
+  display: block; padding: 8px 14px;
   text-decoration: none; font-size: 0.8rem; font-weight: 500;
   color: var(--muted); letter-spacing: 0.3px;
-  transition: color .2s;
-  position: relative;
+  transition: color .2s; position: relative;
 }
 .nav-links a::after {
-  content: ''; position: absolute; bottom: 0; left: 15px; right: 15px;
+  content: ''; position: absolute; bottom: 0; left: 14px; right: 14px;
   height: 2px; background: var(--green);
   transform: scaleX(0); transition: transform .2s;
 }
@@ -78,7 +77,7 @@ nav {
   font-family: 'Outfit', sans-serif; font-size: 0.8rem; font-weight: 500;
   cursor: pointer; text-decoration: none;
   display: inline-flex; align-items: center; gap: 7px;
-  transition: border-color .2s;
+  transition: border-color .2s, color .2s;
 }
 .btn-ghost:hover { border-color: var(--green); color: var(--green-l); }
 .btn-green {
@@ -99,40 +98,38 @@ nav {
   position: relative; overflow: hidden;
 }
 .hero-glow {
-  position: absolute; top: -150px; right: -100px;
-  width: 600px; height: 600px;
-  background: radial-gradient(circle, rgba(123,140,88,0.06) 0%, transparent 70%);
+  position: absolute; top: -200px; right: -100px;
+  width: 700px; height: 700px;
+  background: radial-gradient(circle, rgba(123,140,88,0.05) 0%, transparent 70%);
   pointer-events: none;
 }
 .hero-eyebrow {
-  font-size: 0.72rem; font-weight: 600; letter-spacing: 4px;
+  font-size: 0.7rem; font-weight: 600; letter-spacing: 4px;
   text-transform: uppercase; color: var(--green-l);
-  margin-bottom: 20px;
+  margin-bottom: 24px;
   display: flex; align-items: center; gap: 12px;
-  animation: fadeup .8s .1s forwards;
 }
 .hero-eyebrow::before { content: ''; width: 28px; height: 1px; background: var(--green); }
 h1.hero-name {
   font-family: 'Playfair Display', serif;
-  font-size: clamp(4.5rem, 9vw, 9.5rem);
-  font-weight: 900; line-height: 0.88;
-  letter-spacing: -3px;
-  margin-bottom: 30px;
-  animation: fadeup .9s .25s forwards;
+  font-size: clamp(5rem, 10vw, 10rem);
+  font-weight: 900;
+  line-height: 0.88;
+  letter-spacing: -2px;
+  margin-bottom: 32px;
+  color: var(--white);
 }
-h1.hero-name .first { display: block; color: var(--white); }
-h1.hero-name .last { display: block; color: var(--white); font-style: italic; font-weight: 700; }
+h1.hero-name .first { display: block; font-weight: 900; }
+h1.hero-name .last  { display: block; font-weight: 700; color: var(--white); opacity: 0.85; }
 .hero-sub {
-  max-width: 540px;
+  max-width: 520px;
   font-size: 1rem; color: var(--muted); font-weight: 300; line-height: 1.75;
-  margin-bottom: 44px;
-  animation: fadeup .9s .4s forwards;
+  margin-bottom: 40px;
 }
 .hero-sub strong { color: var(--white); font-weight: 500; }
 .hero-cta {
   display: flex; gap: 12px; align-items: center;
-  margin-bottom: 52px;
-  animation: fadeup .9s .52s forwards;
+  margin-bottom: 48px;
 }
 .btn-primary {
   padding: 14px 30px; border-radius: 9px;
@@ -154,8 +151,7 @@ h1.hero-name .last { display: block; color: var(--white); font-style: italic; fo
 .btn-secondary:hover { border-color: var(--green); color: var(--green-l); }
 .hero-badges {
   display: flex; gap: 9px; flex-wrap: wrap;
-  margin-bottom: 48px;
-  animation: fadeup .9s .62s forwards;
+  margin-bottom: 44px;
 }
 .badge {
   display: inline-flex; align-items: center; gap: 7px;
@@ -166,8 +162,7 @@ h1.hero-name .last { display: block; color: var(--white); font-style: italic; fo
 .badge-dot { width: 5px; height: 5px; border-radius: 50%; background: var(--green); flex-shrink: 0; }
 .hero-skills {
   display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px;
-  max-width: 580px;
-  animation: fadeup .9s .72s forwards;
+  max-width: 560px;
 }
 .hero-skill-card {
   background: var(--bg2); border: 1px solid var(--border); border-radius: var(--r);
@@ -185,14 +180,12 @@ h1.hero-name .last { display: block; color: var(--white); font-style: italic; fo
 .skill-label { font-size: 0.8rem; font-weight: 500; color: var(--white); }
 .hero-photo {
   position: absolute; right: 80px; top: 50%; transform: translateY(-50%);
-  width: 320px; height: 400px;
-  animation: fadein 1.2s .4s forwards;
+  width: 320px; height: 410px;
   border-radius: 14px; overflow: hidden;
 }
 .hero-photo img {
   width: 100%; height: 100%;
   object-fit: cover; object-position: center top;
-  filter: grayscale(10%);
 }
 .hero-photo::after {
   content: ''; position: absolute; inset: 0;
@@ -200,7 +193,7 @@ h1.hero-name .last { display: block; color: var(--white); font-style: italic; fo
 }
 .photo-border {
   position: absolute; inset: -7px;
-  border: 1px solid rgba(123,140,88,0.3); border-radius: 18px;
+  border: 1px solid rgba(123,140,88,0.25); border-radius: 18px;
 }
 
 /* SECTIONS */
@@ -216,7 +209,7 @@ h2.section-title {
   font-family: 'Playfair Display', serif;
   font-size: clamp(2.2rem, 3.5vw, 3.2rem);
   font-weight: 700; line-height: 1.1;
-  margin-bottom: 12px; color: var(--white);
+  margin-bottom: 12px;
 }
 .section-sub {
   font-size: 0.95rem; color: var(--muted);
@@ -225,108 +218,51 @@ h2.section-title {
 }
 
 /* REVEAL */
-.reveal { opacity: 1; transform: none; transition: opacity .65s, transform .65s; }
-.js-loaded .reveal { opacity: 0; transform: translateY(24px); }
+.js-loaded .reveal { opacity: 0; transform: translateY(24px); transition: opacity .65s, transform .65s; }
 .js-loaded .reveal.visible { opacity: 1; transform: none; }
-.reveal-delay1 { transition-delay: .1s; }
-.reveal-delay2 { transition-delay: .18s; }
-.reveal-delay3 { transition-delay: .26s; }
+.js-loaded .reveal-delay1 { transition-delay: .1s; }
+.js-loaded .reveal-delay2 { transition-delay: .18s; }
+.js-loaded .reveal-delay3 { transition-delay: .26s; }
 
-/* PERSONA 2036 */
-.persona-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+/* PERSONA */
+.persona-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
 .persona-main {
   background: var(--bg2); border: 1px solid var(--border); border-radius: var(--r);
-  padding: 40px 36px;
-  grid-row: span 2;
+  padding: 40px 36px; grid-row: span 2;
   position: relative; overflow: hidden;
 }
 .persona-main::before {
   content: '2036'; position: absolute; right: -10px; bottom: -20px;
   font-family: 'Playfair Display', serif;
-  font-size: 8rem; font-weight: 900; color: rgba(123,140,88,0.05);
+  font-size: 8rem; font-weight: 900; color: rgba(123,140,88,0.04);
   line-height: 1; pointer-events: none;
 }
 .persona-title {
   font-family: 'Playfair Display', serif;
-  font-size: 1.6rem; font-weight: 700;
-  margin-bottom: 18px; line-height: 1.2;
+  font-size: 1.55rem; font-weight: 700;
+  margin-bottom: 18px; line-height: 1.25;
 }
 .persona-title em { font-style: italic; color: var(--green-l); }
-.persona-text { font-size: 0.9rem; color: var(--muted); line-height: 1.8; }
-.persona-text p { margin-bottom: 12px; }
+.persona-text { font-size: 0.88rem; color: var(--muted); line-height: 1.85; }
+.persona-text p { margin-bottom: 14px; }
 .persona-text strong { color: var(--white); font-weight: 500; }
 .persona-step {
   background: var(--bg2); border: 1px solid var(--border); border-radius: var(--r);
-  padding: 26px 28px;
-  transition: border-color .25s;
+  padding: 26px 28px; transition: border-color .25s;
 }
 .persona-step:hover { border-color: var(--green-d); }
 .step-num {
   font-size: 0.65rem; font-weight: 700; letter-spacing: 3px;
-  text-transform: uppercase; color: var(--green-l);
-  margin-bottom: 10px;
+  text-transform: uppercase; color: var(--green-l); margin-bottom: 10px;
 }
 .step-title { font-size: 0.95rem; font-weight: 600; margin-bottom: 6px; }
 .step-desc { font-size: 0.82rem; color: var(--muted); line-height: 1.6; }
-
-/* VISION */
-.vision-text {
-  max-width: 720px; font-size: 0.95rem; color: var(--muted);
-  line-height: 1.85; margin-bottom: 48px;
-}
-.vision-text strong { color: var(--white); font-weight: 500; }
-.vision-cards { display: grid; grid-template-columns: repeat(4,1fr); gap: 10px; }
-.vision-card {
-  background: var(--bg2); border: 1px solid var(--border); border-radius: var(--r);
-  padding: 28px 22px;
-  transition: border-color .25s, transform .25s;
-}
-.vision-card:hover { border-color: var(--green-d); transform: translateY(-3px); }
-.vc-icon {
-  width: 40px; height: 40px; border-radius: 9px;
-  background: rgba(123,140,88,0.1);
-  display: flex; align-items: center; justify-content: center;
-  font-size: 1.1rem; margin-bottom: 16px;
-}
-.vc-title { font-size: 0.95rem; font-weight: 600; margin-bottom: 7px; }
-.vc-desc { font-size: 0.8rem; color: var(--muted); line-height: 1.6; }
-
-/* COMPETENCES */
-.skills-outer { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
-.skills-col-title {
-  font-size: 0.68rem; font-weight: 700; letter-spacing: 3px;
-  text-transform: uppercase; color: var(--green-l);
-  margin-bottom: 16px;
-}
-.skills-block {
-  background: var(--bg2); border: 1px solid var(--border); border-radius: var(--r);
-  padding: 30px 28px;
-}
-.skill-row {
-  display: flex; align-items: flex-start; gap: 12px;
-  padding: 10px 0;
-  border-bottom: 1px solid var(--border);
-  font-size: 0.85rem; color: var(--muted); line-height: 1.5;
-}
-.skill-row:last-child { border-bottom: none; }
-.skill-row::before {
-  content: ''; width: 5px; height: 5px; border-radius: 50%;
-  background: var(--green); margin-top: 7px; flex-shrink: 0;
-}
-.skill-row strong { color: var(--white); font-weight: 500; display: block; }
-.soft-grid { display: flex; flex-wrap: wrap; gap: 9px; margin-top: 6px; }
-.soft-pill {
-  padding: 6px 14px; border-radius: 20px;
-  border: 1px solid var(--green-d);
-  font-size: 0.78rem; font-weight: 500; color: var(--green-l);
-}
 
 /* REALISATIONS */
 .realisations-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 12px; }
 .real-card {
   background: var(--bg2); border: 1px solid var(--border); border-radius: var(--r);
-  padding: 32px 28px;
-  display: flex; flex-direction: column;
+  padding: 32px 28px; display: flex; flex-direction: column;
   transition: border-color .25s, transform .25s;
   position: relative; overflow: hidden;
 }
@@ -347,8 +283,7 @@ h2.section-title {
 .tag {
   padding: 4px 11px; border-radius: 20px;
   border: 1px solid var(--green-d);
-  font-size: 0.68rem; font-weight: 600;
-  color: var(--green-l); letter-spacing: .3px;
+  font-size: 0.68rem; font-weight: 600; color: var(--green-l);
 }
 .real-divider {
   font-size: 0.63rem; font-weight: 700; letter-spacing: 3px;
@@ -379,19 +314,37 @@ h2.section-title {
 }
 .expand-content.open { display: block; }
 
+/* COMPETENCES */
+.skills-outer { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+.skills-col-title {
+  font-size: 0.68rem; font-weight: 700; letter-spacing: 3px;
+  text-transform: uppercase; color: var(--green-l); margin-bottom: 14px;
+}
+.skills-block {
+  background: var(--bg2); border: 1px solid var(--border); border-radius: var(--r);
+  padding: 28px;
+}
+.skill-row {
+  display: flex; align-items: flex-start; gap: 12px;
+  padding: 10px 0; border-bottom: 1px solid var(--border);
+  font-size: 0.84rem; color: var(--muted); line-height: 1.5;
+}
+.skill-row:last-child { border-bottom: none; }
+.skill-row::before {
+  content: ''; width: 5px; height: 5px; border-radius: 50%;
+  background: var(--green); margin-top: 7px; flex-shrink: 0;
+}
+.skill-row strong { color: var(--white); font-weight: 500; display: block; }
+
 /* PARCOURS */
 .parcours-list { display: flex; flex-direction: column; gap: 10px; }
 .parc-card {
   background: var(--bg2); border: 1px solid var(--border); border-radius: var(--r);
-  padding: 28px 26px;
-  border-left: 3px solid transparent;
+  padding: 28px 26px; border-left: 3px solid transparent;
   transition: border-color .25s, background .25s;
 }
 .parc-card:hover { border-left-color: var(--green); background: var(--bg3); }
-.parc-meta {
-  display: flex; gap: 12px; align-items: center;
-  margin-bottom: 10px;
-}
+.parc-meta { display: flex; gap: 12px; align-items: center; margin-bottom: 10px; }
 .parc-date {
   font-size: 0.7rem; font-weight: 600; letter-spacing: 2px;
   text-transform: uppercase; color: var(--green-l);
@@ -403,9 +356,7 @@ h2.section-title {
   border: 1px solid var(--green-d);
 }
 .parc-org { font-size: 0.78rem; color: var(--muted); margin-bottom: 8px; }
-.parc-role {
-  font-size: 1.05rem; font-weight: 600; margin-bottom: 8px; color: var(--white);
-}
+.parc-role { font-size: 1.05rem; font-weight: 600; margin-bottom: 8px; }
 .parc-desc { font-size: 0.84rem; color: var(--muted); line-height: 1.7; }
 .parc-bullets { list-style: none; margin-top: 10px; display: flex; flex-direction: column; gap: 5px; }
 .parc-bullets li {
@@ -478,16 +429,14 @@ h2.section-title {
   width: 38px; height: 38px; border-radius: 9px;
   background: rgba(123,140,88,0.1); border: 1px solid var(--green-d);
   display: flex; align-items: center; justify-content: center;
-  font-size: 0.9rem; flex-shrink: 0; color: var(--green-l);
-  font-weight: 600;
+  font-size: 0.9rem; flex-shrink: 0; color: var(--green-l); font-weight: 600;
 }
 .cl-label { font-size: 0.62rem; font-weight: 600; letter-spacing: 2px; text-transform: uppercase; color: var(--muted); margin-bottom: 2px; }
 .cl-val { font-size: 0.86rem; }
 .contact-form { display: flex; flex-direction: column; gap: 13px; }
 .form-label { font-size: 0.67rem; font-weight: 600; letter-spacing: 2px; text-transform: uppercase; color: var(--muted2); margin-bottom: 6px; display: block; }
 .form-input, .form-textarea {
-  width: 100%;
-  background: var(--bg2); border: 1px solid var(--border); border-radius: 8px;
+  width: 100%; background: var(--bg2); border: 1px solid var(--border); border-radius: 8px;
   padding: 12px 15px; color: var(--white);
   font-family: 'Outfit', sans-serif; font-size: 0.86rem;
   outline: none; transition: border-color .2s; resize: none;
@@ -495,19 +444,16 @@ h2.section-title {
 .form-input:focus, .form-textarea:focus { border-color: var(--green); }
 .form-textarea { height: 105px; }
 .btn-send {
-  padding: 13px; border-radius: 9px;
-  background: var(--green); color: #fff;
+  padding: 13px; border-radius: 9px; background: var(--green); color: #fff;
   font-family: 'Outfit', sans-serif; font-size: 0.88rem; font-weight: 600;
-  border: none; cursor: pointer;
-  transition: background .2s, transform .15s;
+  border: none; cursor: pointer; transition: background .2s, transform .15s;
   display: flex; align-items: center; justify-content: center; gap: 8px;
 }
 .btn-send:hover { background: var(--green-l); transform: translateY(-1px); }
 
 /* FOOTER */
 footer {
-  padding: 26px 80px;
-  border-top: 1px solid var(--border);
+  padding: 26px 80px; border-top: 1px solid var(--border);
   display: flex; align-items: center; justify-content: space-between;
 }
 .footer-brand { font-size: 0.88rem; color: var(--muted); }
@@ -516,84 +462,66 @@ footer {
 .footer-links a:hover { color: var(--green-l); }
 .footer-copy { font-size: 0.72rem; color: var(--muted2); }
 
-/* ANIMATIONS */
-@keyframes fadeup { from { opacity:0; transform:translateY(22px); } to { opacity:1; transform:none; } }
-@keyframes fadein { from { opacity:0; } to { opacity:1; } }
-
 /* RESPONSIVE */
 @media (max-width: 1100px) {
   .hero-photo { display: none; }
   #hero { padding: 110px 36px 60px; }
   section { padding: 64px 36px; }
-  nav { padding: 0 24px; }
+  nav { padding: 0 20px; }
   .nav-links { display: none; }
-  .vision-cards, .alt-cards { grid-template-columns: 1fr 1fr; }
-  .realisations-grid { grid-template-columns: 1fr; }
-  .persona-grid { grid-template-columns: 1fr; }
+  .persona-grid, .realisations-grid, .alt-cards, .skills-outer, .contact-grid, .dossier-grid { grid-template-columns: 1fr; }
   .persona-main { grid-row: auto; }
-  .skills-outer { grid-template-columns: 1fr; }
-  .contact-grid, .dossier-grid { grid-template-columns: 1fr; }
   footer { flex-direction: column; gap: 12px; text-align: center; padding: 24px; }
 }
 @media (max-width: 650px) {
-  h1.hero-name { font-size: 3.8rem; letter-spacing: -1px; }
+  h1.hero-name { font-size: 4rem; letter-spacing: -1px; }
   .hero-skills { grid-template-columns: 1fr; }
   .hero-cta { flex-direction: column; align-items: flex-start; }
-  .vision-cards { grid-template-columns: 1fr; }
-  .alt-cards { grid-template-columns: 1fr; }
 }
 </style>
 </head>
 <body>
 
-<!-- NAV -->
 <nav id="navbar">
   <a href="#hero" class="nav-logo">A<span>B</span></a>
   <ul class="nav-links">
     <li><a href="#persona" class="nav-link">Vision 2036</a></li>
-    <li><a href="#realisations" class="nav-link">Realisations</a></li>
-    <li><a href="#competences" class="nav-link">Competences</a></li>
+    <li><a href="#realisations" class="nav-link">Réalisations</a></li>
+    <li><a href="#competences" class="nav-link">Compétences</a></li>
     <li><a href="#parcours" class="nav-link">Parcours</a></li>
     <li><a href="#alternance" class="nav-link">Alternance</a></li>
     <li><a href="#contact" class="nav-link">Contact</a></li>
   </ul>
   <div class="nav-actions">
-    <a href="#contact" class="btn-ghost">
-      <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
-      Me contacter
-    </a>
-    <a href="CV_Axel_Bieuzent.pdf" download class="btn-green">
-      <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 15V3m0 12-4-4m4 4 4-4M2 17l.621 2.485A2 2 0 0 0 4.561 21h14.878a2 2 0 0 0 1.94-1.515L22 17"/></svg>
-      Telecharger mon CV
-    </a>
+    <a href="#contact" class="btn-ghost">Me contacter</a>
+    <a href="CV_Axel_Bieuzent.pdf" download class="btn-green">Télécharger mon CV</a>
   </div>
 </nav>
 
-<!-- HERO -->
 <section id="hero" style="border:none">
   <div class="hero-glow"></div>
-  <div class="hero-eyebrow">Disponible en alternance — BUT TC 2e et 3e annee</div>
+  <div class="hero-eyebrow">Disponible en alternance — BUT TC 2e et 3e année</div>
   <h1 class="hero-name">
     <span class="first">AXEL</span>
-    <span class="last">Bieuzent.</span>
+    <span class="last">BIEUZENT</span>
   </h1>
   <p class="hero-sub">
-    Etudiant en BUT Techniques de Commercialisation — IUT Grand Ouest Normandie, Caen.<br>
-    <strong>Je transforme la discipline en resultats</strong> : sur le terrain, dans les donnees, et dans l'execution.
+    Étudiant en BUT Techniques de Commercialisation — IUT Grand Ouest Normandie, Caen.<br>
+    <strong>Je transforme la discipline en résultats</strong> : sur le terrain, dans les données, et dans l’exécution.
   </p>
   <div class="hero-cta">
-    <a href="#alternance" class="btn-primary">Mon projet d'alternance</a>
-    <a href="#realisations" class="btn-secondary">Voir mes realisations</a>
+    <a href="#alternance" class="btn-primary">Mon projet d’alternance</a>
+    <a href="#realisations" class="btn-secondary">Voir mes réalisations</a>
   </div>
   <div class="hero-badges">
-    <span class="badge"><span class="badge-dot"></span>Base a Caen</span>
+    <span class="badge"><span class="badge-dot"></span>Basé à Caen</span>
     <span class="badge"><span class="badge-dot"></span>Mobile et terrain</span>
-    <span class="badge"><span class="badge-dot"></span>Orientation resultats</span>
-    <span class="badge"><span class="badge-dot"></span>Permis B — Vehicule</span>
+    <span class="badge"><span class="badge-dot"></span>Orientation résultats</span>
+    <span class="badge"><span class="badge-dot"></span>Permis B — Véhiculé</span>
   </div>
   <div class="hero-skills">
     <div class="hero-skill-card"><div class="skill-icon">🎯</div><span class="skill-label">Prospection et vente</span></div>
-    <div class="hero-skill-card"><div class="skill-icon">📊</div><span class="skill-label">Etude de marche</span></div>
+    <div class="hero-skill-card"><div class="skill-icon">📊</div><span class="skill-label">Étude de marché</span></div>
     <div class="hero-skill-card"><div class="skill-icon">🤝</div><span class="skill-label">Relation client</span></div>
   </div>
   <div class="hero-photo">
@@ -602,263 +530,210 @@ footer {
   </div>
 </section>
 
-<!-- PERSONA 2036 -->
 <section id="persona">
   <div class="section-eyebrow reveal">Ma vision</div>
-  <h2 class="section-title reveal">Ou je me vois<br>en 2036</h2>
-  <p class="section-sub reveal">Pas une ambition floue — un cap concret, construit etape par etape.</p>
+  <h2 class="section-title reveal">Où je me vois en 2036</h2>
+  <p class="section-sub reveal">Pas une ambition floue — un cap concret, construit étape par étape.</p>
   <div class="persona-grid">
     <div class="persona-main reveal">
       <div class="persona-title">Responsable, puis <em>Directeur commercial</em> — dans une structure B2B.</div>
       <div class="persona-text">
-        <p>Mon objectif a 10 ans : piloter une equipe commerciale dans un environnement B2B, idealement technico-commercial. Pas une ambition par defaut — c'est le metier qui me correspond : <strong>terrain, enjeux concrets, mesure des resultats</strong>.</p>
-        <p>L'alternance chez Avritec est la premiere brique. Apprendre le metier de commercial de A a Z dans un contexte industriel, comprendre la vente technique, developper mon autonomie. Ensuite progresser vers des responsabilites plus larges — management, strategie commerciale, pilotage de portefeuille clients.</p>
-        <p>Ce que j'applique deja a l'entrainement physique — <strong>progression methodique, mesure, constance</strong> — je l'applique a ma trajectoire professionnelle. La discipline n'est pas une posture, c'est une methode.</p>
+        <p>Mon objectif à 10 ans : piloter une équipe commerciale dans un environnement B2B, idéalement technico-commercial. Pas une ambition par défaut — c’est le métier qui me correspond : <strong>terrain, enjeux concrets, mesure des résultats</strong>.</p>
+        <p>L’alternance chez Avritec est la première brique. Apprendre le métier de commercial de A à Z dans un contexte industriel, comprendre la vente technique, développer mon autonomie. Ensuite progresser vers des responsabilités plus larges.</p>
+        <p>Ce que j’applique déjà à l’entraînement physique — <strong>progression méthodique, mesure, constance</strong> — je l’applique à ma trajectoire professionnelle.</p>
       </div>
     </div>
     <div class="persona-step reveal reveal-delay1">
-      <div class="step-num">Etape 1 — Maintenant</div>
+      <div class="step-num">Étape 1 — Maintenant</div>
       <div class="step-title">BUT TC + Alternance Avritec</div>
-      <div class="step-desc">Former mes bases en vente terrain, negociation, relation client B2B. Apprendre la vente technique dans un univers industriel.</div>
+      <div class="step-desc">Former mes bases en vente terrain, négociation, relation client B2B. Apprendre la vente technique dans un univers industriel.</div>
     </div>
     <div class="persona-step reveal reveal-delay2">
-      <div class="step-num">Etape 2 — 2027-2030</div>
-      <div class="step-title">Commercial terrain confirme</div>
-      <div class="step-desc">Gerer un portefeuille clients en autonomie. Atteindre mes objectifs, comprendre les mecaniques d'un cycle de vente complet.</div>
+      <div class="step-num">Étape 2 — 2027–2030</div>
+      <div class="step-title">Commercial terrain confirmé</div>
+      <div class="step-desc">Gérer un portefeuille clients en autonomie. Maîtriser le cycle de vente complet et atteindre mes objectifs.</div>
     </div>
     <div class="persona-step reveal reveal-delay3">
-      <div class="step-num">Etape 3 — Horizon 2036</div>
+      <div class="step-num">Étape 3 — Horizon 2036</div>
       <div class="step-title">Responsable / Directeur commercial</div>
-      <div class="step-desc">Porter une equipe, definir une strategie, piloter des KPIs ambitieux. Ancre dans le terrain, oriente resultats.</div>
+      <div class="step-desc">Porter une équipe, définir une stratégie, piloter des KPIs ambitieux. Ancré dans le terrain, orienté résultats.</div>
     </div>
   </div>
 </section>
 
-<!-- REALISATIONS -->
 <section id="realisations">
   <div class="section-eyebrow reveal">Projets concrets</div>
-  <h2 class="section-title reveal">Realisations concretes</h2>
-  <p class="section-sub reveal">Du terrain a l'analyse : je sais vendre, structurer, et rendre compte.</p>
+  <h2 class="section-title reveal">Réalisations concrètes</h2>
+  <p class="section-sub reveal">Du terrain à l’analyse : je sais vendre, structurer, et rendre compte.</p>
   <div class="realisations-grid">
 
-    <!-- SAE MADELEINES -->
     <div class="real-card reveal">
-      <div class="real-title">SAE Vente — Madeleines Jeannette</div>
-      <p class="real-desc">Vente terrain en conditions reelles pour Madeleines Jeannette, marque normande. Pas de simulation : on prospecte, on pitche, on gere les objections, on conclut. Une experience qui forge des reflexes commerciaux qu'aucun cours magistral ne peut donner.</p>
+      <div class="real-title">SAÉ Vente — Madeleines Jeannette</div>
+      <p class="real-desc">Vente terrain en conditions réelles pour Madeleines Jeannette, marque normande. Pas de simulation : on prospecte, on pitche, on gère les objections, on conclut. Une expérience qui forge des réflexes commerciaux concrets et un rapport sain au refus.</p>
       <div class="real-tags">
         <span class="tag">Prospection</span>
         <span class="tag">Argumentation</span>
         <span class="tag">Objections</span>
         <span class="tag">Closing</span>
       </div>
-      <div class="real-divider">Ce que j'ai produit</div>
+      <div class="real-divider">Ce que j’ai produit</div>
       <ul class="real-list">
-        <li>Argumentaire structure (methode CAB)</li>
-        <li>Gestion des refus et adaptation du pitch en temps reel</li>
+        <li>Argumentaire structuré (méthode CAB)</li>
+        <li>Gestion des refus et adaptation du pitch en temps réel</li>
         <li>Suivi et reporting des ventes par produit</li>
-        <li>Bilan individuel et identification des axes d'amelioration</li>
+        <li>Bilan individuel et identification des axes d’amélioration</li>
       </ul>
-      <button class="expand-btn" onclick="toggleExpand(this)">Ce que ca m'a appris <span>+</span></button>
-      <div class="expand-content">Vendre a des inconnus sous pression m'a confronte a la realite du terrain : le refus fait partie du metier, pas de l'echec. J'ai appris a lire l'interlocuteur vite, a m'adapter au contexte et a garder de l'energie sur la duree. Ces reflexes, on les acquiert uniquement dans l'action.</div>
+      <button class="expand-btn" onclick="toggleExpand(this)">Ce que ça m’a appris <span>+</span></button>
+      <div class="expand-content">Vendre à des inconnus sous pression m’a confronté à la réalité du terrain : le refus fait partie du métier. J’ai appris à lire l’interlocuteur vite, à m’adapter au contexte et à garder de l’énergie sur la durée. Ces réflexes, on les acquiert uniquement dans l’action.</div>
     </div>
 
-    <!-- KIDLIB -->
     <div class="real-card reveal reveal-delay1">
-      <div class="real-title">Projet KidLib — Etude de marche</div>
-      <p class="real-desc">Etude de marche realisee en equipe pour les fondateurs de KidLib — plateforme de mise en relation entre parents et assistantes maternelles pour des besoins urgents de garde. Role : Responsable diffusion et terrain de l'enquete quantitative.</p>
+      <div class="real-title">Projet KidLib — Étude de marché</div>
+      <p class="real-desc">Étude de marché réalisée en équipe pour les fondateurs de KidLib — plateforme de mise en relation entre parents et assistantes maternelles pour des besoins urgents de garde. Rôle : Responsable diffusion et terrain de l’enquête quantitative.</p>
       <div class="real-tags">
-        <span class="tag">Etude de marche</span>
+        <span class="tag">Étude de marché</span>
         <span class="tag">Quantitatif</span>
-        <span class="tag">Analyse donnees</span>
+        <span class="tag">Analyse données</span>
         <span class="tag">Segmentation</span>
       </div>
-      <div class="real-divider">Ce que j'ai produit</div>
+      <div class="real-divider">Ce que j’ai produit</div>
       <ul class="real-list">
-        <li>Questionnaire quantitatif — 1 119 repondants collectes</li>
-        <li>Pilotage de la diffusion terrain et numerique</li>
-        <li>Analyse des resultats et segmentation des cibles</li>
+        <li>Questionnaire quantitatif — <strong>1 119 répondants</strong> collectés</li>
+        <li>Pilotage de la diffusion terrain et numérique</li>
+        <li>Analyse des résultats et segmentation des cibles</li>
         <li>Pitch de restitution complet (dossier + slides + oral)</li>
       </ul>
-      <button class="expand-btn" onclick="toggleExpand(this)">Methode de travail <span>+</span></button>
-      <div class="expand-content">J'ai pilote la collecte des reponses : relances, diffusion multi-canal, terrain. Ensuite l'exploitation des donnees : croisements, identification des profils, formulation des insights strategiques pour les commanditaires du projet.</div>
+      <button class="expand-btn" onclick="toggleExpand(this)">Méthode de travail <span>+</span></button>
+      <div class="expand-content">J’ai piloté la collecte des réponses : relances, diffusion multi-canal, terrain. Ensuite l’exploitation des données : croisements, identification des profils, formulation des insights stratégiques pour les commanditaires du projet.</div>
     </div>
 
-    <!-- VINTED -->
     <div class="real-card reveal reveal-delay2">
       <div class="real-title">Vinted — Commerce en ligne</div>
-      <p class="real-desc">Gestion autonome d'un compte vendeur actif pendant 2 ans. Un cas concret d'e-commerce ou j'ai developpe de vrais reflexes commerciaux : presentation produit, pricing, negociation, fidelisation — sans filet, sur mes propres resultats.</p>
+      <p class="real-desc">Gestion autonome d’un compte vendeur actif pendant 2 ans. Un cas concret d’e-commerce où j’ai développé de vrais réflexes commerciaux : présentation produit, pricing, négociation, fidélisation — sans filet, sur mes propres résultats.</p>
       <div class="real-tags">
         <span class="tag">E-commerce</span>
         <span class="tag">Pricing</span>
-        <span class="tag">Negociation</span>
+        <span class="tag">Négociation</span>
         <span class="tag">Conversion</span>
       </div>
-      <div class="real-divider">Ce que j'ai developpe</div>
+      <div class="real-divider">Ce que j’ai développé</div>
       <ul class="real-list">
         <li>Optimisation des fiches produit et du taux de conversion</li>
-        <li>Politique de prix adaptee a la concurrence</li>
-        <li>Negociation directe avec les acheteurs</li>
-        <li>Gestion des litiges et fidelisation des acheteurs reguliers</li>
+        <li>Politique de prix adaptée à la concurrence</li>
+        <li>Négociation directe avec les acheteurs</li>
+        <li>Gestion des litiges et fidélisation des acheteurs réguliers</li>
       </ul>
-      <button class="expand-btn" onclick="toggleExpand(this)">Pourquoi c'est pertinent <span>+</span></button>
-      <div class="expand-content">Vinted m'a oblige a penser comme un commercial : pourquoi quelqu'un acheterait chez moi plutot qu'ailleurs ? Comment je formule l'offre ? Comment je reponds a une objection sur le prix ? Ces questions, je me les pose aussi bien sur un marche B2C digital que sur un terrain B2B.</div>
+      <button class="expand-btn" onclick="toggleExpand(this)">Pourquoi c’est pertinent <span>+</span></button>
+      <div class="expand-content">Vinted m’a obligé à penser comme un commercial : pourquoi quelqu’un achèterait chez moi plutôt qu’ailleurs ? Comment je formule l’offre ? Comment je réponds à une objection sur le prix ?</div>
     </div>
 
   </div>
 </section>
 
-<!-- COMPETENCES -->
 <section id="competences">
   <div class="section-eyebrow reveal">Savoir-faire</div>
-  <h2 class="section-title reveal">Competences</h2>
-  <p class="section-sub reveal">Ce que je sais faire concretement — pas des mots, des capacites.</p>
+  <h2 class="section-title reveal">Compétences</h2>
+  <p class="section-sub reveal">Ce que je sais faire concrètement — pas des mots, des capacités.</p>
   <div class="skills-outer">
     <div>
       <div class="skills-col-title reveal">Hard Skills</div>
       <div class="skills-block reveal">
-        <div class="skill-row"><div><strong>Excel</strong>Creer un fichier client structure, utiliser RECHERCHEV et les tableaux croises dynamiques</div></div>
-        <div class="skill-row"><div><strong>Etude de marche quantitative</strong>Construire un questionnaire, collecter des repondants (1 119 sur KidLib), analyser et croiser les donnees</div></div>
-        <div class="skill-row"><div><strong>Argumentation et pitch commercial</strong>Structurer un argumentaire (CAB), repondre aux objections, adapter le discours a l'interlocuteur</div></div>
-        <div class="skill-row"><div><strong>Canva et Suite Office</strong>Concevoir des supports de presentation professionnels et des dossiers structures</div></div>
-        <div class="skill-row"><div><strong>Negociation</strong>Preparer une negociation, identifier les marges de manoeuvre, conduire un entretien de vente</div></div>
+        <div class="skill-row"><div><strong>Excel</strong>Créer un fichier client structuré, utiliser RECHERCHEV et les tableaux croisés dynamiques</div></div>
+        <div class="skill-row"><div><strong>Étude de marché quantitative</strong>Construire un questionnaire, collecter 1 119 répondants (KidLib), analyser et croiser les données</div></div>
+        <div class="skill-row"><div><strong>Argumentation et pitch commercial</strong>Structurer un argumentaire (CAB), répondre aux objections, adapter le discours à l’interlocuteur</div></div>
+        <div class="skill-row"><div><strong>Canva et Suite Office</strong>Concevoir des supports de présentation professionnels et des dossiers structurés</div></div>
+        <div class="skill-row"><div><strong>Négociation</strong>Préparer une négociation, identifier les marges de manoeuvre, conduire un entretien de vente</div></div>
         <div class="skill-row"><div><strong>Langues</strong>Anglais B2 — Espagnol B1</div></div>
       </div>
     </div>
     <div>
       <div class="skills-col-title reveal">Soft Skills</div>
       <div class="skills-block reveal reveal-delay1">
-        <div class="skill-row"><div><strong>Discipline et regularite</strong>Entrainement 4x/semaine depuis plusieurs mois — la meme rigueur s'applique au travail</div></div>
-        <div class="skill-row"><div><strong>Resilience</strong>Apprendre a rebondir sur un refus, ajuster sa methode plutot que se decourager</div></div>
-        <div class="skill-row"><div><strong>Esprit d'equipe</strong>Projets collectifs en BUT TC, roles definis, livrables communs respectes</div></div>
+        <div class="skill-row"><div><strong>Discipline et régularité</strong>Entraînement 4x/semaine — la même rigueur s’applique au travail</div></div>
+        <div class="skill-row"><div><strong>Résilience</strong>Apprendre à rebondir sur un refus, ajuster sa méthode plutôt que se décourager</div></div>
+        <div class="skill-row"><div><strong>Esprit d’équipe</strong>Projets collectifs en BUT TC, rôles définis, livrables communs respectés</div></div>
         <div class="skill-row"><div><strong>Autonomie</strong>Capable de travailler sans supervision constante — gestion de Vinted, diffusion terrain KidLib</div></div>
-        <div class="skill-row"><div><strong>Communication orale</strong>A l'aise en prise de parole, pitch, entretien et negociation</div></div>
-        <div class="skill-row"><div><strong>Organisation</strong>Suivi des priorites, respect des delais sur plusieurs projets en parallele</div></div>
+        <div class="skill-row"><div><strong>Communication orale</strong>À l’aise en prise de parole, pitch, entretien et négociation</div></div>
+        <div class="skill-row"><div><strong>Organisation</strong>Suivi des priorités, respect des délais sur plusieurs projets en parallèle</div></div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- PARCOURS -->
 <section id="parcours">
-  <div class="section-eyebrow reveal">Experiences</div>
+  <div class="section-eyebrow reveal">Expériences</div>
   <h2 class="section-title reveal">Parcours professionnel</h2>
-  <p class="section-sub reveal">Experiences reelles, apprentissages concrets.</p>
+  <p class="section-sub reveal">Expériences réelles, apprentissages concrets.</p>
   <div class="parcours-list">
-
     <div class="parc-card reveal">
-      <div class="parc-meta">
-        <span class="parc-date">Janvier 2026</span>
-        <span class="parc-type">Stage · 3 semaines</span>
-      </div>
-      <div class="parc-org">Lair Immobilier — Bagnoles-de-l'Orne</div>
+      <div class="parc-meta"><span class="parc-date">Janvier 2026</span><span class="parc-type">Stage · 3 semaines</span></div>
+      <div class="parc-org">Lair Immobilier — Bagnoles-de-l’Orne</div>
       <div class="parc-role">Stage — Immobilier</div>
-      <p class="parc-desc">Immersion complete en agence : prospection terrain, relation client, cycle de vente de A a Z.</p>
+      <p class="parc-desc">Immersion complète en agence : prospection terrain, relation client, cycle de vente de A à Z.</p>
       <ul class="parc-bullets">
         <li>Prospection terrain : pige et recherche de mandats</li>
         <li>Visites de biens et estimations avec les clients</li>
         <li>Accueil, orientation et suivi des dossiers</li>
       </ul>
     </div>
-
     <div class="parc-card reveal">
-      <div class="parc-meta">
-        <span class="parc-date">Aout 2024</span>
-        <span class="parc-type">Interim</span>
-      </div>
+      <div class="parc-meta"><span class="parc-date">Août 2024</span><span class="parc-type">Intérim</span></div>
       <div class="parc-org">SNV — Groupe LDC</div>
       <div class="parc-role">Agent polyvalent de magasin</div>
-      <p class="parc-desc">Mission en environnement industriel : rigueur, organisation et fiabilite dans un contexte exigeant.</p>
+      <p class="parc-desc">Mission en environnement industriel : rigueur, organisation et fiabilité dans un contexte exigeant.</p>
       <ul class="parc-bullets">
         <li>Gestion documentaire : tri, classement, archivage</li>
-        <li>Participation a l'approvisionnement et a la logistique</li>
+        <li>Participation à l’approvisionnement et à la logistique</li>
       </ul>
     </div>
-
     <div class="parc-card reveal">
-      <div class="parc-meta">
-        <span class="parc-date">Mars 2023</span>
-        <span class="parc-type">Stage</span>
-      </div>
+      <div class="parc-meta"><span class="parc-date">Mars 2023</span><span class="parc-type">Stage</span></div>
       <div class="parc-org">SNV Pont Morin — Groupe LDC</div>
       <div class="parc-role">Stage — Approvisionnement et Achats</div>
-      <p class="parc-desc">Premiere exposition aux achats B2B dans un grand groupe agro-alimentaire.</p>
+      <p class="parc-desc">Première exposition aux achats B2B dans un grand groupe agro-alimentaire.</p>
       <ul class="parc-bullets">
-        <li>Suivi des besoins d'achat et gestion des fournisseurs</li>
-        <li>Participation aux negociations tarifaires et delais</li>
+        <li>Suivi des besoins d’achat et gestion des fournisseurs</li>
+        <li>Participation aux négociations tarifaires et délais</li>
       </ul>
     </div>
-
     <div class="parc-card reveal">
-      <div class="parc-meta">
-        <span class="parc-date">Fevrier 2023</span>
-        <span class="parc-type">Observation</span>
-      </div>
-      <div class="parc-org">Avritec — Gonfreville-l'Orcher</div>
-      <div class="parc-role">Stage d'observation — Industrie B2B</div>
-      <p class="parc-desc">Decouverte du fonctionnement d'une entreprise industrielle et de ses services. Premiere immersion dans la vente technique B2B.</p>
+      <div class="parc-meta"><span class="parc-date">Février 2023</span><span class="parc-type">Observation</span></div>
+      <div class="parc-org">Avritec — Gonfreville-l’Orcher</div>
+      <div class="parc-role">Stage d’observation — Industrie B2B</div>
+      <p class="parc-desc">Découverte du fonctionnement d’une entreprise industrielle spécialisée dans la distribution technique. Première immersion dans l’univers B2B.</p>
     </div>
-
   </div>
 </section>
 
-<!-- ALTERNANCE -->
 <section id="alternance">
   <div class="section-eyebrow reveal">Recruteurs</div>
-  <h2 class="alt-title reveal">Pret a integrer<br>votre equipe commerciale.</h2>
-  <p class="alt-sub reveal">Je cherche une alternance ou je peux performer, apprendre vite, et contribuer concretement.</p>
-
+  <h2 class="alt-title reveal">Prêt à intégrer votre équipe commerciale.</h2>
+  <p class="alt-sub reveal">Je cherche une alternance où je peux performer, apprendre vite, et contribuer concrètement.</p>
   <div class="dossier-card reveal">
     <div class="dossier-header">Dossier recruteur</div>
     <div class="dossier-grid">
-      <div>
-        <div class="dossier-key">Disponibilite</div>
-        <div class="dossier-val">Operationnel des le 01/09/2026 — demarrage alternance en 2e annee de BUT TC</div>
-      </div>
-      <div>
-        <div class="dossier-key">Localisation</div>
-        <div class="dossier-val">Base a Caen — permis B, vehicule, 100% mobile</div>
-      </div>
-      <div>
-        <div class="dossier-key">Rythme d'alternance</div>
-        <div class="dossier-val">BUT TC 2e et 3e annee — IUT Grand Ouest Normandie, Caen</div>
-      </div>
-      <div>
-        <div class="dossier-key">Pistes actives</div>
-        <div class="dossier-val">Avritec (Gonfreville-l'Orcher) · Natixis Interepargne</div>
-      </div>
+      <div><div class="dossier-key">Disponibilité</div><div class="dossier-val">Opérationnel dès le 01/09/2026 — 2e année de BUT TC</div></div>
+      <div><div class="dossier-key">Localisation</div><div class="dossier-val">Basé à Caen — permis B, véhiculé, 100% mobile</div></div>
+      <div><div class="dossier-key">Rythme d’alternance</div><div class="dossier-val">BUT TC 2e et 3e année — IUT Grand Ouest Normandie, Caen</div></div>
+      <div><div class="dossier-key">Pistes actives</div><div class="dossier-val">Avritec (Gonfreville-l’Orcher) · Natixis Interépargne</div></div>
     </div>
-    <div class="dossier-hl">Profil eligible a l'aide gouvernementale de <span>6 000 euros</span> pour l'apprentissage — un investissement rentable, une rigueur de terrain au service de vos objectifs.</div>
+    <div class="dossier-hl">Profil éligible à l’aide gouvernementale de <span>6 000 €</span> pour l’apprentissage — un investissement rentable, une rigueur de terrain au service de vos objectifs.</div>
   </div>
-
   <div class="alt-cards reveal">
-    <div class="alt-card">
-      <div class="alt-icon">🎯</div>
-      <div class="alt-card-title">Terrain</div>
-      <div class="alt-card-desc">Prospection, objections, relation client. J'aime le terrain, pas les taches sans enjeu.</div>
-    </div>
-    <div class="alt-card">
-      <div class="alt-icon">📊</div>
-      <div class="alt-card-title">Pilotage</div>
-      <div class="alt-card-desc">Suivi, reporting, analyse des resultats. Je mesure pour progresser.</div>
-    </div>
-    <div class="alt-card">
-      <div class="alt-icon">🗂</div>
-      <div class="alt-card-title">Structure</div>
-      <div class="alt-card-desc">Fichiers clients, segmentation, supports commerciaux. J'organise pour performer.</div>
-    </div>
+    <div class="alt-card"><div class="alt-icon">🎯</div><div class="alt-card-title">Terrain</div><div class="alt-card-desc">Prospection, objections, relation client. J’aime le terrain, pas les tâches sans enjeu.</div></div>
+    <div class="alt-card"><div class="alt-icon">📊</div><div class="alt-card-title">Pilotage</div><div class="alt-card-desc">Suivi, reporting, analyse des résultats. Je mesure pour progresser.</div></div>
+    <div class="alt-card"><div class="alt-icon">🗂</div><div class="alt-card-title">Structure</div><div class="alt-card-desc">Fichiers clients, segmentation, supports commerciaux. J’organise pour performer.</div></div>
   </div>
-
   <div class="alt-ctas reveal">
-    <a href="#contact" class="btn-primary">Proposer un echange</a>
-    <a href="CV_Axel_Bieuzent.pdf" download class="btn-secondary">Telecharger mon CV (PDF)</a>
+    <a href="#contact" class="btn-primary">Proposer un échange</a>
+    <a href="CV_Axel_Bieuzent.pdf" download class="btn-secondary">Télécharger mon CV (PDF)</a>
   </div>
 </section>
 
-<!-- CONTACT -->
 <section id="contact">
   <div class="section-eyebrow reveal">Contact</div>
-  <h2 class="section-title reveal">Disponible pour<br>echanger rapidement.</h2>
-  <p class="section-sub reveal">Une opportunite ? Je reponds dans la journee.</p>
+  <h2 class="section-title reveal">Disponible pour échanger rapidement.</h2>
+  <p class="section-sub reveal">Une opportunité ? Je réponds dans la journée.</p>
   <div class="contact-grid reveal">
     <div class="contact-links">
       <a href="https://www.linkedin.com/in/axel-bieuzent-aa193a389/" target="_blank" class="contact-link">
@@ -871,26 +746,22 @@ footer {
       </a>
       <a href="tel:0766589424" class="contact-link">
         <div class="cl-icon">☎</div>
-        <div><div class="cl-label">Telephone</div><div class="cl-val">07 66 58 94 24</div></div>
+        <div><div class="cl-label">Téléphone</div><div class="cl-val">07 66 58 94 24</div></div>
       </a>
       <a href="CV_Axel_Bieuzent.pdf" download class="contact-link">
         <div class="cl-icon">↓</div>
-        <div><div class="cl-label">CV PDF</div><div class="cl-val">Telecharger mon CV</div></div>
+        <div><div class="cl-label">CV PDF</div><div class="cl-val">Télécharger mon CV</div></div>
       </a>
     </div>
     <form class="contact-form" onsubmit="sendMail(event)">
       <div><label class="form-label">Nom</label><input id="fn" type="text" class="form-input" placeholder="Votre nom"></div>
       <div><label class="form-label">Email</label><input id="fe" type="email" class="form-input" placeholder="votre@email.com"></div>
       <div><label class="form-label">Message</label><textarea id="fm" class="form-textarea" placeholder="Votre message..."></textarea></div>
-      <button type="submit" class="btn-send">
-        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
-        Envoyer
-      </button>
+      <button type="submit" class="btn-send">Envoyer</button>
     </form>
   </div>
 </section>
 
-<!-- FOOTER -->
 <footer>
   <div class="footer-brand">Axel Bieuzent — Portfolio Commercial</div>
   <div class="footer-links">
@@ -903,35 +774,28 @@ footer {
 
 <script>
 document.documentElement.classList.add("js-loaded");
-// Reveal on scroll
 const obs = new IntersectionObserver((entries) => {
-  entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+  entries.forEach(e => { if (e.isIntersecting) e.target.classList.add("visible"); });
 }, { threshold: 0.07 });
-document.querySelectorAll('.reveal').forEach(r => obs.observe(r));
-
-// Active nav
-const secs = document.querySelectorAll('section[id]');
-const links = document.querySelectorAll('.nav-link');
-window.addEventListener('scroll', () => {
-  let cur = '';
+document.querySelectorAll(".reveal").forEach(r => obs.observe(r));
+const secs = document.querySelectorAll("section[id]");
+const links = document.querySelectorAll(".nav-link");
+window.addEventListener("scroll", () => {
+  let cur = "";
   secs.forEach(s => { if (window.scrollY >= s.offsetTop - 90) cur = s.id; });
-  links.forEach(l => l.classList.toggle('active', l.getAttribute('href') === '#' + cur));
+  links.forEach(l => l.classList.toggle("active", l.getAttribute("href") === "#" + cur));
 }, { passive: true });
-
-// Expand
 function toggleExpand(btn) {
   const c = btn.nextElementSibling;
-  const open = c.classList.toggle('open');
-  btn.querySelector('span').textContent = open ? '-' : '+';
+  const open = c.classList.toggle("open");
+  btn.querySelector("span").textContent = open ? "-" : "+";
 }
-
-// Contact form
 function sendMail(e) {
   e.preventDefault();
-  const n = document.getElementById('fn').value;
-  const email = document.getElementById('fe').value;
-  const m = document.getElementById('fm').value;
-  window.location.href = `mailto:axelbieuzent61000@gmail.com?subject=Message de ${encodeURIComponent(n)}&body=${encodeURIComponent(m + '\n\nRepondre a : ' + email)}`;
+  const n = document.getElementById("fn").value;
+  const em = document.getElementById("fe").value;
+  const m = document.getElementById("fm").value;
+  window.location.href = "mailto:axelbieuzent61000@gmail.com?subject=Message de " + encodeURIComponent(n) + "&body=" + encodeURIComponent(m + "\n\nRépondre à : " + em);
 }
 </script>
 </body>
