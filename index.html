@@ -753,11 +753,14 @@ footer {
         <div><div class="cl-label">CV PDF</div><div class="cl-val">Télécharger mon CV</div></div>
       </a>
     </div>
-    <form class="contact-form" onsubmit="sendMail(event)">
-      <div><label class="form-label">Nom</label><input id="fn" type="text" class="form-input" placeholder="Votre nom"></div>
-      <div><label class="form-label">Email</label><input id="fe" type="email" class="form-input" placeholder="votre@email.com"></div>
-      <div><label class="form-label">Message</label><textarea id="fm" class="form-textarea" placeholder="Votre message..."></textarea></div>
-      <button type="submit" class="btn-send">Envoyer</button>
+    <form class="contact-form" action="https://formspree.io/f/xrejawdp" method="POST">
+      <div><label class="form-label">Nom</label><input type="text" name="name" class="form-input" placeholder="Votre nom" required></div>
+      <div><label class="form-label">Email</label><input type="email" name="email" class="form-input" placeholder="votre@email.com" required></div>
+      <div><label class="form-label">Message</label><textarea name="message" class="form-textarea" placeholder="Votre message..." required></textarea></div>
+      <button type="submit" class="btn-send">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+        Envoyer
+      </button>
     </form>
   </div>
 </section>
@@ -790,13 +793,7 @@ function toggleExpand(btn) {
   const open = c.classList.toggle("open");
   btn.querySelector("span").textContent = open ? "-" : "+";
 }
-function sendMail(e) {
-  e.preventDefault();
-  const n = document.getElementById("fn").value;
-  const em = document.getElementById("fe").value;
-  const m = document.getElementById("fm").value;
-  window.location.href = "mailto:axelbieuzent61000@gmail.com?subject=Message de " + encodeURIComponent(n) + "&body=" + encodeURIComponent(m + "\n\nRépondre à : " + em);
-}
+// Formulaire géré par Formspree
 </script>
 </body>
 </html>
