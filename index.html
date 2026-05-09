@@ -11,12 +11,12 @@
   --bg:      #080808;
   --bg2:     #0f0f0f;
   --bg3:     #161616;
-  --green:   #7B8C58;
-  --green-l: #98AB70;
+  --green:   #8A9E64;
+  --green-l: #AABF80;
   --green-d: #5A6840;
   --white:   #F0EDE8;
-  --muted:   #7A7870;
-  --muted2:  #444440;
+  --muted:   #9A9890;
+  --muted2:  #666660;
   --border:  #202020;
   --border2: #2A2A28;
   --r:       10px;
@@ -28,7 +28,7 @@ body {
   color: var(--white);
   font-family: 'Outfit', sans-serif;
   font-weight: 400;
-  line-height: 1.65;
+  line-height: 1.8;
   overflow-x: hidden;
 }
 ::-webkit-scrollbar { width: 3px; }
@@ -47,7 +47,7 @@ nav {
 }
 .nav-logo {
   font-family: 'Outfit', sans-serif;
-  font-size: 1rem; font-weight: 600;
+  font-size: 1.15rem; font-weight: 600;
   color: var(--white);
   text-decoration: none;
   letter-spacing: 3px;
@@ -57,7 +57,7 @@ nav {
 .nav-links { display: flex; list-style: none; gap: 2px; }
 .nav-links a {
   display: block; padding: 8px 14px;
-  text-decoration: none; font-size: 0.8rem; font-weight: 500;
+  text-decoration: none; font-size: 0.94rem; font-weight: 500;
   color: var(--muted); letter-spacing: 0.3px;
   transition: color .2s; position: relative;
 }
@@ -74,7 +74,7 @@ nav {
   padding: 8px 16px; border-radius: 8px;
   border: 1px solid var(--border2);
   background: transparent; color: var(--white);
-  font-family: 'Outfit', sans-serif; font-size: 0.8rem; font-weight: 500;
+  font-family: 'Outfit', sans-serif; font-size: 0.94rem; font-weight: 500;
   cursor: pointer; text-decoration: none;
   display: inline-flex; align-items: center; gap: 7px;
   transition: border-color .2s, color .2s;
@@ -83,7 +83,7 @@ nav {
 .btn-green {
   padding: 8px 18px; border-radius: 8px;
   background: var(--green); color: #fff; border: none;
-  font-family: 'Outfit', sans-serif; font-size: 0.8rem; font-weight: 600;
+  font-family: 'Outfit', sans-serif; font-size: 0.94rem; font-weight: 600;
   cursor: pointer; text-decoration: none;
   display: inline-flex; align-items: center; gap: 7px;
   transition: background .2s, transform .15s;
@@ -104,7 +104,7 @@ nav {
   pointer-events: none;
 }
 .hero-eyebrow {
-  font-size: 0.7rem; font-weight: 600; letter-spacing: 4px;
+  font-size: 0.98rem; font-weight: 600; letter-spacing: 4px;
   text-transform: uppercase; color: var(--green-l);
   margin-bottom: 24px;
   display: flex; align-items: center; gap: 12px;
@@ -123,7 +123,7 @@ h1.hero-name .first { display: block; font-weight: 900; }
 h1.hero-name .last  { display: block; font-weight: 700; color: var(--white); opacity: 0.85; }
 .hero-sub {
   max-width: 520px;
-  font-size: 1rem; color: var(--muted); font-weight: 300; line-height: 1.75;
+  font-size: 1.15rem; color: var(--muted); font-weight: 300; line-height: 1.85;
   margin-bottom: 40px;
 }
 .hero-sub strong { color: var(--white); font-weight: 500; }
@@ -134,7 +134,7 @@ h1.hero-name .last  { display: block; font-weight: 700; color: var(--white); opa
 .btn-primary {
   padding: 14px 30px; border-radius: 9px;
   background: var(--green); color: #fff; border: none;
-  font-family: 'Outfit', sans-serif; font-size: 0.88rem; font-weight: 600;
+  font-family: 'Outfit', sans-serif; font-size: 1.02rem; font-weight: 600;
   text-decoration: none; cursor: pointer;
   transition: background .2s, transform .15s, box-shadow .2s;
   box-shadow: 0 4px 20px rgba(123,140,88,0.2);
@@ -144,7 +144,7 @@ h1.hero-name .last  { display: block; font-weight: 700; color: var(--white); opa
   padding: 14px 30px; border-radius: 9px;
   background: transparent; color: var(--white);
   border: 1px solid var(--border2);
-  font-family: 'Outfit', sans-serif; font-size: 0.88rem; font-weight: 500;
+  font-family: 'Outfit', sans-serif; font-size: 1.02rem; font-weight: 500;
   text-decoration: none; cursor: pointer;
   transition: border-color .2s, color .2s;
 }
@@ -157,7 +157,7 @@ h1.hero-name .last  { display: block; font-weight: 700; color: var(--white); opa
   display: inline-flex; align-items: center; gap: 7px;
   padding: 7px 13px;
   background: var(--bg2); border: 1px solid var(--border2); border-radius: 20px;
-  font-size: 0.75rem; font-weight: 500; color: var(--muted);
+  font-size: 1.02rem; font-weight: 500; color: var(--muted);
 }
 .badge-dot { width: 5px; height: 5px; border-radius: 50%; background: var(--green); flex-shrink: 0; }
 .hero-skills {
@@ -175,9 +175,9 @@ h1.hero-name .last  { display: block; font-weight: 700; color: var(--white); opa
   width: 34px; height: 34px; border-radius: 8px;
   background: rgba(123,140,88,0.1);
   display: flex; align-items: center; justify-content: center;
-  font-size: 0.95rem; flex-shrink: 0;
+  font-size: 1.25rem; flex-shrink: 0;
 }
-.skill-label { font-size: 0.8rem; font-weight: 500; color: var(--white); }
+.skill-label { font-size: 0.94rem; font-weight: 500; color: var(--white); }
 .hero-photo {
   position: absolute; right: 80px; top: 50%; transform: translateY(-50%);
   width: 320px; height: 410px;
@@ -197,9 +197,9 @@ h1.hero-name .last  { display: block; font-weight: 700; color: var(--white); opa
 }
 
 /* SECTIONS */
-section { padding: 96px 80px; border-top: 1px solid var(--border); }
+section { padding: 100px 80px; border-top: 1px solid var(--border); }
 .section-eyebrow {
-  font-size: 0.68rem; font-weight: 600; letter-spacing: 4px;
+  font-size: 0.96rem; font-weight: 600; letter-spacing: 4px;
   text-transform: uppercase; color: var(--green-l);
   margin-bottom: 12px;
   display: flex; align-items: center; gap: 12px;
@@ -207,13 +207,13 @@ section { padding: 96px 80px; border-top: 1px solid var(--border); }
 .section-eyebrow::before { content: ''; width: 22px; height: 1px; background: var(--green); }
 h2.section-title {
   font-family: 'Playfair Display', serif;
-  font-size: clamp(2.2rem, 3.5vw, 3.2rem);
+  font-size: clamp(2.6rem, 4vw, 3.8rem);
   font-weight: 700; line-height: 1.1;
   margin-bottom: 12px;
 }
 .section-sub {
-  font-size: 0.95rem; color: var(--muted);
-  font-weight: 300; max-width: 580px; line-height: 1.75;
+  font-size: 1.25rem; color: var(--muted);
+  font-weight: 300; max-width: 580px; line-height: 1.85;
   margin-bottom: 52px;
 }
 
@@ -239,11 +239,11 @@ h2.section-title {
 }
 .persona-title {
   font-family: 'Playfair Display', serif;
-  font-size: 1.55rem; font-weight: 700;
+  font-size: 1.8rem; font-weight: 700;
   margin-bottom: 18px; line-height: 1.25;
 }
 .persona-title em { font-style: italic; color: var(--green-l); }
-.persona-text { font-size: 0.88rem; color: var(--muted); line-height: 1.85; }
+.persona-text { font-size: 1.02rem; color: var(--muted); line-height: 1.85; }
 .persona-text p { margin-bottom: 14px; }
 .persona-text strong { color: var(--white); font-weight: 500; }
 .persona-step {
@@ -252,11 +252,11 @@ h2.section-title {
 }
 .persona-step:hover { border-color: var(--green-d); }
 .step-num {
-  font-size: 0.65rem; font-weight: 700; letter-spacing: 3px;
+  font-size: 0.8rem; font-weight: 700; letter-spacing: 3px;
   text-transform: uppercase; color: var(--green-l); margin-bottom: 10px;
 }
-.step-title { font-size: 0.95rem; font-weight: 600; margin-bottom: 6px; }
-.step-desc { font-size: 0.82rem; color: var(--muted); line-height: 1.6; }
+.step-title { font-size: 1.25rem; font-weight: 600; margin-bottom: 6px; }
+.step-desc { font-size: 0.96rem; color: var(--muted); line-height: 1.6; }
 
 /* REALISATIONS */
 .realisations-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 12px; }
@@ -275,25 +275,25 @@ h2.section-title {
 .real-card:hover { border-color: var(--green-d); transform: translateY(-2px); }
 .real-title {
   font-family: 'Playfair Display', serif;
-  font-size: 1.2rem; font-weight: 700;
+  font-size: 1.35rem; font-weight: 700;
   margin-bottom: 12px; line-height: 1.25;
 }
-.real-desc { font-size: 0.84rem; color: var(--muted); line-height: 1.7; margin-bottom: 18px; }
+.real-desc { font-size: 0.98rem; color: var(--muted); line-height: 1.8; margin-bottom: 18px; }
 .real-tags { display: flex; flex-wrap: wrap; gap: 7px; margin-bottom: 20px; }
 .tag {
   padding: 4px 11px; border-radius: 20px;
   border: 1px solid var(--green-d);
-  font-size: 0.68rem; font-weight: 600; color: var(--green-l);
+  font-size: 0.96rem; font-weight: 600; color: var(--green-l);
 }
 .real-divider {
-  font-size: 0.63rem; font-weight: 700; letter-spacing: 3px;
+  font-size: 0.78rem; font-weight: 700; letter-spacing: 3px;
   text-transform: uppercase; color: var(--muted2);
   margin-bottom: 10px; margin-top: auto; padding-top: 18px;
   border-top: 1px solid var(--border);
 }
 .real-list { list-style: none; }
 .real-list li {
-  font-size: 0.81rem; color: var(--muted); padding: 5px 0;
+  font-size: 1.25rem; color: var(--muted); padding: 5px 0;
   display: flex; align-items: flex-start; gap: 9px;
 }
 .real-list li::before {
@@ -301,7 +301,7 @@ h2.section-title {
   background: var(--green); margin-top: 7px; flex-shrink: 0;
 }
 .expand-btn {
-  margin-top: 16px; font-size: 0.76rem; font-weight: 600; color: var(--green-l);
+  margin-top: 16px; font-size: 0.88rem; font-weight: 600; color: var(--green-l);
   cursor: pointer; display: flex; align-items: center; gap: 6px;
   background: none; border: none; font-family: 'Outfit', sans-serif;
   padding: 0; transition: color .2s;
@@ -309,7 +309,7 @@ h2.section-title {
 .expand-btn:hover { color: var(--white); }
 .expand-content {
   display: none; margin-top: 12px;
-  font-size: 0.81rem; color: var(--muted); line-height: 1.7;
+  font-size: 1.25rem; color: var(--muted); line-height: 1.8;
   border-left: 2px solid var(--green-d); padding-left: 14px;
 }
 .expand-content.open { display: block; }
@@ -317,7 +317,7 @@ h2.section-title {
 /* COMPETENCES */
 .skills-outer { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
 .skills-col-title {
-  font-size: 0.68rem; font-weight: 700; letter-spacing: 3px;
+  font-size: 0.96rem; font-weight: 700; letter-spacing: 3px;
   text-transform: uppercase; color: var(--green-l); margin-bottom: 14px;
 }
 .skills-block {
@@ -327,7 +327,7 @@ h2.section-title {
 .skill-row {
   display: flex; align-items: flex-start; gap: 12px;
   padding: 10px 0; border-bottom: 1px solid var(--border);
-  font-size: 0.84rem; color: var(--muted); line-height: 1.5;
+  font-size: 0.98rem; color: var(--muted); line-height: 1.5;
 }
 .skill-row:last-child { border-bottom: none; }
 .skill-row::before {
@@ -346,21 +346,21 @@ h2.section-title {
 .parc-card:hover { border-left-color: var(--green); background: var(--bg3); }
 .parc-meta { display: flex; gap: 12px; align-items: center; margin-bottom: 10px; }
 .parc-date {
-  font-size: 0.7rem; font-weight: 600; letter-spacing: 2px;
+  font-size: 0.98rem; font-weight: 600; letter-spacing: 2px;
   text-transform: uppercase; color: var(--green-l);
 }
 .parc-type {
-  font-size: 0.68rem; font-weight: 500;
+  font-size: 0.96rem; font-weight: 500;
   padding: 3px 9px; border-radius: 12px;
   background: rgba(123,140,88,0.1); color: var(--green-l);
   border: 1px solid var(--green-d);
 }
-.parc-org { font-size: 0.78rem; color: var(--muted); margin-bottom: 8px; }
-.parc-role { font-size: 1.05rem; font-weight: 600; margin-bottom: 8px; }
-.parc-desc { font-size: 0.84rem; color: var(--muted); line-height: 1.7; }
+.parc-org { font-size: 1.2rem; color: var(--muted); margin-bottom: 8px; }
+.parc-role { font-size: 1.2rem; font-weight: 600; margin-bottom: 8px; }
+.parc-desc { font-size: 0.98rem; color: var(--muted); line-height: 1.8; }
 .parc-bullets { list-style: none; margin-top: 10px; display: flex; flex-direction: column; gap: 5px; }
 .parc-bullets li {
-  font-size: 0.81rem; color: var(--muted);
+  font-size: 1.25rem; color: var(--muted);
   display: flex; align-items: flex-start; gap: 9px;
 }
 .parc-bullets li::before {
@@ -371,30 +371,30 @@ h2.section-title {
 /* ALTERNANCE */
 .alt-title {
   font-family: 'Playfair Display', serif;
-  font-size: clamp(2rem, 3.8vw, 3rem); font-weight: 700;
+  font-size: clamp(2.4rem, 4.2vw, 3.5rem); font-weight: 700;
   line-height: 1.1; margin-bottom: 18px; max-width: 780px;
 }
-.alt-sub { font-size: 0.95rem; color: var(--muted); max-width: 540px; margin-bottom: 44px; line-height: 1.7; }
+.alt-sub { font-size: 1.25rem; color: var(--muted); max-width: 540px; margin-bottom: 44px; line-height: 1.8; }
 .dossier-card {
   background: var(--bg2); border: 1px solid var(--border); border-radius: var(--r);
   padding: 30px 32px; margin-bottom: 12px;
 }
 .dossier-header {
-  font-size: 0.68rem; font-weight: 700; letter-spacing: 3px;
+  font-size: 0.96rem; font-weight: 700; letter-spacing: 3px;
   text-transform: uppercase; color: var(--green-l);
   margin-bottom: 22px; display: flex; align-items: center; gap: 9px;
 }
 .dossier-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 22px; margin-bottom: 18px; }
 .dossier-key {
-  font-size: 0.63rem; font-weight: 700; letter-spacing: 3px;
+  font-size: 0.78rem; font-weight: 700; letter-spacing: 3px;
   text-transform: uppercase; color: var(--muted2); margin-bottom: 5px;
 }
-.dossier-val { font-size: 0.88rem; color: var(--white); line-height: 1.5; }
+.dossier-val { font-size: 1.02rem; color: var(--white); line-height: 1.5; }
 .dossier-hl {
   padding: 13px 18px;
   background: rgba(123,140,88,0.07);
   border: 1px solid var(--green-d); border-radius: 8px;
-  font-size: 0.84rem; color: var(--white); line-height: 1.6;
+  font-size: 0.98rem; color: var(--white); line-height: 1.6;
 }
 .dossier-hl span { color: var(--green-l); font-weight: 600; }
 .alt-cards { display: grid; grid-template-columns: repeat(3,1fr); gap: 10px; margin-top: 12px; }
@@ -410,8 +410,8 @@ h2.section-title {
   display: flex; align-items: center; justify-content: center;
   font-size: 1.35rem; margin: 0 auto 14px;
 }
-.alt-card-title { font-size: 0.95rem; font-weight: 600; margin-bottom: 7px; }
-.alt-card-desc { font-size: 0.8rem; color: var(--muted); line-height: 1.6; }
+.alt-card-title { font-size: 1.25rem; font-weight: 600; margin-bottom: 7px; }
+.alt-card-desc { font-size: 0.94rem; color: var(--muted); line-height: 1.6; }
 .alt-ctas { display: flex; gap: 12px; margin-top: 36px; flex-wrap: wrap; }
 
 /* CONTACT */
@@ -429,23 +429,23 @@ h2.section-title {
   width: 38px; height: 38px; border-radius: 9px;
   background: rgba(123,140,88,0.1); border: 1px solid var(--green-d);
   display: flex; align-items: center; justify-content: center;
-  font-size: 0.9rem; flex-shrink: 0; color: var(--green-l); font-weight: 600;
+  font-size: 1.2rem; flex-shrink: 0; color: var(--green-l); font-weight: 600;
 }
-.cl-label { font-size: 0.62rem; font-weight: 600; letter-spacing: 2px; text-transform: uppercase; color: var(--muted); margin-bottom: 2px; }
-.cl-val { font-size: 0.86rem; }
+.cl-label { font-size: 0.78rem; font-weight: 600; letter-spacing: 2px; text-transform: uppercase; color: var(--muted); margin-bottom: 2px; }
+.cl-val { font-size: 1.15rem; }
 .contact-form { display: flex; flex-direction: column; gap: 13px; }
-.form-label { font-size: 0.67rem; font-weight: 600; letter-spacing: 2px; text-transform: uppercase; color: var(--muted2); margin-bottom: 6px; display: block; }
+.form-label { font-size: 0.82rem; font-weight: 600; letter-spacing: 2px; text-transform: uppercase; color: var(--muted2); margin-bottom: 6px; display: block; }
 .form-input, .form-textarea {
   width: 100%; background: var(--bg2); border: 1px solid var(--border); border-radius: 8px;
   padding: 12px 15px; color: var(--white);
-  font-family: 'Outfit', sans-serif; font-size: 0.86rem;
+  font-family: 'Outfit', sans-serif; font-size: 1.15rem;
   outline: none; transition: border-color .2s; resize: none;
 }
 .form-input:focus, .form-textarea:focus { border-color: var(--green); }
 .form-textarea { height: 105px; }
 .btn-send {
   padding: 13px; border-radius: 9px; background: var(--green); color: #fff;
-  font-family: 'Outfit', sans-serif; font-size: 0.88rem; font-weight: 600;
+  font-family: 'Outfit', sans-serif; font-size: 1.02rem; font-weight: 600;
   border: none; cursor: pointer; transition: background .2s, transform .15s;
   display: flex; align-items: center; justify-content: center; gap: 8px;
 }
@@ -456,11 +456,11 @@ footer {
   padding: 26px 80px; border-top: 1px solid var(--border);
   display: flex; align-items: center; justify-content: space-between;
 }
-.footer-brand { font-size: 0.88rem; color: var(--muted); }
+.footer-brand { font-size: 1.02rem; color: var(--muted); }
 .footer-links { display: flex; gap: 18px; }
-.footer-links a { color: var(--muted2); font-size: 0.9rem; text-decoration: none; transition: color .2s; }
+.footer-links a { color: var(--muted2); font-size: 1.2rem; text-decoration: none; transition: color .2s; }
 .footer-links a:hover { color: var(--green-l); }
-.footer-copy { font-size: 0.72rem; color: var(--muted2); }
+.footer-copy { font-size: 1.15rem; color: var(--muted2); }
 
 /* RESPONSIVE */
 @media (max-width: 1100px) {
@@ -490,6 +490,7 @@ footer {
     <li><a href="#competences" class="nav-link">Compétences</a></li>
     <li><a href="#parcours" class="nav-link">Parcours</a></li>
     <li><a href="#alternance" class="nav-link">Alternance</a></li>
+    <li><a href="#documents" class="nav-link">Documents</a></li>
     <li><a href="#contact" class="nav-link">Contact</a></li>
   </ul>
   <div class="nav-actions">
@@ -562,72 +563,127 @@ footer {
 </section>
 
 <section id="realisations">
-  <div class="section-eyebrow reveal">Projets concrets</div>
-  <h2 class="section-title reveal">Réalisations concrètes</h2>
-  <p class="section-sub reveal">Du terrain à l’analyse : je sais vendre, structurer, et rendre compte.</p>
+  <div class="section-eyebrow reveal">SAÉ &amp; réalisations</div>
+  <h2 class="section-title reveal">Situations d’apprentissage</h2>
+  <p class="section-sub reveal">5 situations vécues en formation — ce que j’ai fait, ce que j’ai appris, les compétences que j’en tire.</p>
   <div class="realisations-grid">
 
     <div class="real-card reveal">
       <div class="real-title">SAÉ Vente — Madeleines Jeannette</div>
-      <p class="real-desc">Vente terrain en conditions réelles pour Madeleines Jeannette, marque normande. Pas de simulation : on prospecte, on pitche, on gère les objections, on conclut. Une expérience qui forge des réflexes commerciaux concrets et un rapport sain au refus.</p>
+      <p class="real-desc">Vente terrain en conditions réelles pour Madeleines Jeannette, marque normande. Prospection, argumentation, gestion des objections, closing — sans simulation. Une expérience qui forge des réflexes commerciaux concrets.</p>
       <div class="real-tags">
         <span class="tag">Prospection</span>
-        <span class="tag">Argumentation</span>
+        <span class="tag">Argumentation CAB</span>
         <span class="tag">Objections</span>
         <span class="tag">Closing</span>
       </div>
-      <div class="real-divider">Ce que j’ai produit</div>
+      <div class="real-divider">Compétences mobilisées</div>
       <ul class="real-list">
-        <li>Argumentaire structuré (méthode CAB)</li>
-        <li>Gestion des refus et adaptation du pitch en temps réel</li>
-        <li>Suivi et reporting des ventes par produit</li>
-        <li>Bilan individuel et identification des axes d’amélioration</li>
+        <li>Construire et adapter un argumentaire en temps réel</li>
+        <li>Gérer les refus sans se décourager</li>
+        <li>Analyser ses résultats et identifier ses axes de progression</li>
       </ul>
-      <button class="expand-btn" onclick="toggleExpand(this)">Ce que ça m’a appris <span>+</span></button>
-      <div class="expand-content">Vendre à des inconnus sous pression m’a confronté à la réalité du terrain : le refus fait partie du métier. J’ai appris à lire l’interlocuteur vite, à m’adapter au contexte et à garder de l’énergie sur la durée. Ces réflexes, on les acquiert uniquement dans l’action.</div>
+      <button class="expand-btn" onclick="toggleExpand(this)">Ce que ça m'a appris <span>+</span></button>
+      <div class="expand-content">Le refus fait partie du métier — pas de l'échec. J'ai appris à lire l'interlocuteur vite et à m'adapter. Ces réflexes s'acquièrent uniquement dans l'action.</div>
     </div>
 
     <div class="real-card reveal reveal-delay1">
-      <div class="real-title">Projet KidLib — Étude de marché</div>
-      <p class="real-desc">Étude de marché réalisée en équipe pour les fondateurs de KidLib — plateforme de mise en relation entre parents et assistantes maternelles pour des besoins urgents de garde. Rôle : Responsable diffusion et terrain de l’enquête quantitative.</p>
+      <div class="real-title">SAÉ Marketing — Relancement Prisunic</div>
+      <p class="real-desc">SAÉ fin d'année alliant marketing et communication : concevoir un plan de relancement complet pour Prisunic, enseigne de grande distribution disparue. Positionnement, cible, stratégie de marque et plan de communication opérationnel.</p>
       <div class="real-tags">
-        <span class="tag">Étude de marché</span>
-        <span class="tag">Quantitatif</span>
-        <span class="tag">Analyse données</span>
-        <span class="tag">Segmentation</span>
+        <span class="tag">Stratégie marketing</span>
+        <span class="tag">Positionnement</span>
+        <span class="tag">Communication</span>
+        <span class="tag">Plan d'actions</span>
       </div>
-      <div class="real-divider">Ce que j’ai produit</div>
+      <div class="real-divider">Compétences mobilisées</div>
       <ul class="real-list">
-        <li>Questionnaire quantitatif — <strong>1 119 répondants</strong> collectés</li>
-        <li>Pilotage de la diffusion terrain et numérique</li>
-        <li>Analyse des résultats et segmentation des cibles</li>
-        <li>Pitch de restitution complet (dossier + slides + oral)</li>
+        <li>Analyser un marché et diagnostiquer une marque</li>
+        <li>Définir un positionnement et une cible pertinents</li>
+        <li>Construire un plan de communication structuré</li>
       </ul>
-      <button class="expand-btn" onclick="toggleExpand(this)">Méthode de travail <span>+</span></button>
-      <div class="expand-content">J’ai piloté la collecte des réponses : relances, diffusion multi-canal, terrain. Ensuite l’exploitation des données : croisements, identification des profils, formulation des insights stratégiques pour les commanditaires du projet.</div>
+      <button class="expand-btn" onclick="toggleExpand(this)">Ce que ça m'a appris <span>+</span></button>
+      <div class="expand-content">Travailler sur une marque morte oblige à tout reconstruire. C'est un exercice complet de stratégie qui m'a appris à articuler une offre autour d'un besoin réel de marché.</div>
     </div>
 
     <div class="real-card reveal reveal-delay2">
-      <div class="real-title">Vinted — Commerce en ligne</div>
-      <p class="real-desc">Gestion autonome d’un compte vendeur actif pendant 2 ans. Un cas concret d’e-commerce où j’ai développé de vrais réflexes commerciaux : présentation produit, pricing, négociation, fidélisation — sans filet, sur mes propres résultats.</p>
+      <div class="real-title">SAÉ Transverse — Merchandising Eau Minérale</div>
+      <p class="real-desc">SAÉ transverse menée en équipe : analyse et optimisation d'un rayon eau minérale en grande surface. Étude de l'implantation, du facing, de la signalétique et de la stratégie de référencement produit.</p>
+      <div class="real-tags">
+        <span class="tag">Merchandising</span>
+        <span class="tag">Travail en équipe</span>
+        <span class="tag">Analyse terrain</span>
+        <span class="tag">Présentation orale</span>
+      </div>
+      <div class="real-divider">Compétences mobilisées</div>
+      <ul class="real-list">
+        <li>Analyser un rayon avec un regard praticien</li>
+        <li>Formuler des préconisations d'optimisation argumentées</li>
+        <li>Travailler en équipe sur un livrable commun</li>
+      </ul>
+      <button class="expand-btn" onclick="toggleExpand(this)">Ce que ça m'a appris <span>+</span></button>
+      <div class="expand-content">Le merchandising, c'est du commercial silencieux. La façon dont un produit est mis en scène influence directement la décision d'achat.</div>
+    </div>
+
+    <div class="real-card reveal">
+      <div class="real-title">Projet KidLib — Étude de marché</div>
+      <p class="real-desc">Étude de marché quantitative menée en équipe pour les fondateurs de KidLib — plateforme de mise en relation entre parents et assistantes maternelles pour des gardes urgentes. Rôle : responsable diffusion et terrain.</p>
+      <div class="real-tags">
+        <span class="tag">Étude de marché</span>
+        <span class="tag">Quantitatif</span>
+        <span class="tag">Segmentation</span>
+        <span class="tag">Pitch</span>
+      </div>
+      <div class="real-divider">Compétences mobilisées</div>
+      <ul class="real-list">
+        <li>Construire et diffuser un questionnaire quantitatif — 1 119 répondants</li>
+        <li>Analyser les données et segmenter les cibles</li>
+        <li>Restituer les résultats à l'oral devant les commanditaires</li>
+      </ul>
+      <button class="expand-btn" onclick="toggleExpand(this)">Ce que ça m'a appris <span>+</span></button>
+      <div class="expand-content">Piloter la diffusion d'une enquête terrain m'a appris la rigueur méthodologique et la gestion d'un projet dans la durée avec des livrables réels.</div>
+    </div>
+
+    <div class="real-card reveal reveal-delay1">
+      <div class="real-title">Vinted — Commerce en ligne autonome</div>
+      <p class="real-desc">Gestion autonome d'un compte vendeur actif pendant 2 ans. Un terrain d'entraînement commercial concret : présentation produit, pricing, négociation, fidélisation — sans filet, sur mes propres résultats.</p>
       <div class="real-tags">
         <span class="tag">E-commerce</span>
         <span class="tag">Pricing</span>
         <span class="tag">Négociation</span>
         <span class="tag">Conversion</span>
       </div>
-      <div class="real-divider">Ce que j’ai développé</div>
+      <div class="real-divider">Compétences mobilisées</div>
       <ul class="real-list">
-        <li>Optimisation des fiches produit et du taux de conversion</li>
-        <li>Politique de prix adaptée à la concurrence</li>
-        <li>Négociation directe avec les acheteurs</li>
-        <li>Gestion des litiges et fidélisation des acheteurs réguliers</li>
+        <li>Optimiser des fiches produit pour maximiser la conversion</li>
+        <li>Négocier directement avec les acheteurs</li>
+        <li>Gérer les litiges et fidéliser les acheteurs réguliers</li>
       </ul>
-      <button class="expand-btn" onclick="toggleExpand(this)">Pourquoi c’est pertinent <span>+</span></button>
-      <div class="expand-content">Vinted m’a obligé à penser comme un commercial : pourquoi quelqu’un achèterait chez moi plutôt qu’ailleurs ? Comment je formule l’offre ? Comment je réponds à une objection sur le prix ?</div>
+      <button class="expand-btn" onclick="toggleExpand(this)">Pourquoi c'est pertinent <span>+</span></button>
+      <div class="expand-content">Vinted m'a obligé à penser comme un commercial : pourquoi quelqu'un achèterait chez moi plutôt qu'ailleurs ? C'est la même question qu'en B2B.</div>
+    </div>
+
+    <div class="real-card reveal reveal-delay2">
+      <div class="real-title">Recherche de stage — Démarche proactive</div>
+      <p class="real-desc">Démarche autonome de recherche du stage de S2 : ciblage des entreprises, rédaction des candidatures, relances et entretiens. Candidatures envoyées à Caen et en Normandie — Intersport, Boulanger, agences immobilières. Obtention du stage chez Lair Immobilier.</p>
+      <div class="real-tags">
+        <span class="tag">Prospection</span>
+        <span class="tag">Rédaction</span>
+        <span class="tag">Autonomie</span>
+        <span class="tag">Relance</span>
+      </div>
+      <div class="real-divider">Compétences mobilisées</div>
+      <ul class="real-list">
+        <li>Cibler et sélectionner des entreprises pertinentes</li>
+        <li>Adapter CV et lettre de motivation à chaque cible</li>
+        <li>Assurer le suivi et les relances sans se décourager</li>
+      </ul>
+      <button class="expand-btn" onclick="toggleExpand(this)">Ce que ça m'a appris <span>+</span></button>
+      <div class="expand-content">Chercher un stage, c'est déjà vendre — se vendre. Les mêmes réflexes qu'en prospection : cibler, argumenter, relancer. C'est la persévérance qui paie.</div>
     </div>
 
   </div>
+ </div>
 </section>
 
 <section id="competences">
@@ -727,6 +783,90 @@ footer {
   <div class="alt-ctas reveal">
     <a href="#contact" class="btn-primary">Proposer un échange</a>
     <a href="CV_Axel_Bieuzent.pdf" download class="btn-secondary">Télécharger mon CV (PDF)</a>
+  </div>
+</section>
+
+<section id="documents">
+  <div class="section-eyebrow reveal">À télécharger</div>
+  <h2 class="section-title reveal">Documents du PPP</h2>
+  <p class="section-sub reveal">Tous les livrables de mon Projet Personnel et Professionnel — disponibles en téléchargement.</p>
+
+  <div class="parcours-list reveal">
+
+    <div class="parc-card" style="display:flex;align-items:center;justify-content:space-between;gap:24px;">
+      <div>
+        <div class="parc-date">CURRICULUM VITAE</div>
+        <div class="parc-role" style="margin-bottom:4px">CV Axel Bieuzent — BUT TC</div>
+        <div class="parc-desc">Parcours, expériences, compétences et centres d'intérêt.</div>
+      </div>
+      <a href="CV_Axel_Bieuzent.pdf" download class="btn-primary" style="white-space:nowrap;flex-shrink:0">Télécharger ↓</a>
+    </div>
+
+    <div class="parc-card" style="display:flex;align-items:center;justify-content:space-between;gap:24px;">
+      <div>
+        <div class="parc-date">LETTRE DE MOTIVATION</div>
+        <div class="parc-role" style="margin-bottom:4px">Candidature parcours BDMRC — 2e &amp; 3e année BUT TC</div>
+        <div class="parc-desc">Motivation et cohérence du choix de parcours avec l'alternance et le projet professionnel.</div>
+      </div>
+      <a href="LM_BDMRC_Axel_Bieuzent.pdf" download class="btn-primary" style="white-space:nowrap;flex-shrink:0">Télécharger ↓</a>
+    </div>
+
+    <div class="parc-card" style="display:flex;align-items:center;justify-content:space-between;gap:24px;">
+      <div>
+        <div class="parc-date">CAS DE JULIE — MA VERSION</div>
+        <div class="parc-role" style="margin-bottom:4px">Bilan pré-professionnel — Fiche expérience, formation, compétences</div>
+        <div class="parc-desc">Démarche d'auto-évaluation sur les 3 axes : formation, expériences, centres d'intérêt.</div>
+      </div>
+      <a href="Cas_Julie_Axel_Bieuzent.pdf" download class="btn-primary" style="white-space:nowrap;flex-shrink:0">Télécharger ↓</a>
+    </div>
+
+    <div class="parc-card" style="display:flex;align-items:center;justify-content:space-between;gap:24px;">
+      <div>
+        <div class="parc-date">ENTRETIEN PROFESSIONNEL</div>
+        <div class="parc-role" style="margin-bottom:4px">Compte-rendu — Pierre B., Directeur Adjoint, Avritec</div>
+        <div class="parc-desc">Questions posées, résumé des réponses et enseignements pour le projet professionnel.</div>
+      </div>
+      <a href="CR_Entretien_Pierre_B_Avritec.pdf" download class="btn-primary" style="white-space:nowrap;flex-shrink:0">Télécharger ↓</a>
+    </div>
+
+  </div>
+
+  <!-- Entretien visuel -->
+  <div style="margin-top:40px">
+    <div class="section-eyebrow reveal" style="margin-bottom:20px">Entretien professionnel — en détail</div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px" class="reveal">
+
+      <div class="parc-card">
+        <div class="parc-date">MAI 2026 · 35 MINUTES</div>
+        <div class="parc-org">Avritec — Gonfreville-l'Orcher</div>
+        <div class="parc-role">Pierre B. — Directeur Adjoint</div>
+        <p class="parc-desc" style="margin-top:8px">Distribution de solutions d'étanchéité industrielle B2B. Clients : pétrochimie, raffinerie, maintenance lourde (TotalEnergies, sites SEVESO, port du Havre).</p>
+        <div style="margin-top:16px;padding-top:16px;border-top:1px solid var(--border)">
+          <div style="font-size:0.65rem;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:var(--muted2);margin-bottom:10px">Questions posées</div>
+          <ul class="parc-bullets">
+            <li>Présentation d'Avritec et de son rôle</li>
+            <li>Parcours : de la technique vers le commerce</li>
+            <li>Réalité du métier de technico-commercial au quotidien</li>
+            <li>Comment monter en compétences techniques sans background industriel</li>
+            <li>Qualités qui font la différence dans ce secteur</li>
+            <li>Défis actuels : approvisionnement, transition énergétique, digitalisation</li>
+            <li>Conseils pour quelqu'un qui arrive à 18 ans</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="parc-card">
+        <div style="font-size:0.65rem;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:var(--muted2);margin-bottom:14px">Ce que j'en retiens</div>
+        <p class="parc-desc" style="margin-bottom:14px">Le parcours de Pierre B. — DUT technique, APAVE, reconversion commerce — est l'inverse du mien. Pourtant, c'est sa crédibilité technique qui fonde aujourd'hui toute sa relation client. Ma priorité à l'arrivée chez Avritec : investir dans la compétence produit.</p>
+        <p class="parc-desc" style="margin-bottom:14px">Son évolution vers la direction s'est faite par étapes, sans grande école. Formation complémentaire ciblée, terrain, progression méthodique. Une approche que je peux m'approprier.</p>
+        <p class="parc-desc">Les enjeux de transition énergétique (hydrogène, renouvelables) ouvrent des opportunités commerciales réelles — un angle que je pourrai explorer pendant l'alternance.</p>
+        <div style="margin-top:20px;padding:12px 16px;background:rgba(123,140,88,0.07);border:1px solid var(--green-d);border-radius:8px">
+          <div style="font-size:0.78rem;color:var(--green-l);font-style:italic">"Profite de l'alternance pour poser le maximum de questions — c'est le moment où tu peux ne pas savoir."</div>
+          <div style="font-size:0.68rem;color:var(--muted);margin-top:6px">— Pierre B., Directeur Adjoint, Avritec</div>
+        </div>
+      </div>
+
+    </div>
   </div>
 </section>
 
