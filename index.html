@@ -298,6 +298,10 @@ figcaption { margin-top: .8rem; max-width: 42rem; }
 .rendus-grid img { width: 100%; aspect-ratio: 16 / 9; object-fit: cover; background: var(--film); }
 .rendus-grid.br-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
 .br-grid img { aspect-ratio: 1000 / 707; object-fit: contain; background: #fff; border: 1px solid var(--rule); }
+.outil img { width: 100%; height: auto; background: #fff; border: 1px solid var(--ink); cursor: var(--cross); }
+.outil b { color: var(--ink); font-weight: 650; }
+.outils-duo { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: clamp(2rem, 4vw, 3rem) clamp(1.2rem, 2.5vw, 2rem); }
+@media (max-width: 640px) { .outils-duo { grid-template-columns: minmax(0, 1fr); } }
 
 /* Film : la salle de cinéma */
 .film {
@@ -747,6 +751,7 @@ footer { background: var(--film); color: var(--film-dim); padding: 0 0 clamp(2re
           <li>Pour la business review de l'équipe commerciale, je prépare les chiffres et le suivi des affaires de chaque commercial.</li>
           <li>Je crée des présentations PowerPoint.</li>
           <li>Je fais aussi des e-mailings clients et des vidéos produit (exemples ci-dessous).</li>
+          <li>Avec Pierre, je crée des outils internes pour l'entreprise avec Claude Code&nbsp;: un calculateur de prix de vente, un outil RH et une plateforme d'évaluation des salariés (captures ci-dessous).</li>
         </ul>
 
         <h3>Quatre exemples de mon travail</h3>
@@ -786,6 +791,25 @@ footer { background: var(--film); color: var(--film-dim); padding: 0 0 clamp(2re
             </div>
             <figcaption>La business review de novembre 2026 pour l'agence Nord&nbsp;: bilan du mois, chiffre d'affaires, suivi des affaires. Je prépare les chiffres et le suivi des affaires de chaque commercial. Le document est confidentiel&nbsp;: seuls les titres restent lisibles.</figcaption>
           </figure>
+        </div>
+
+        <h3 id="outils">Les outils que je crée avec Pierre</h3>
+        <p>Avec Pierre, nous développons des logiciels internes pour Avritec avec Claude Code, un outil d'IA qui écrit le code. Je suis actif à chaque étape&nbsp;: je définis le besoin, je teste, je corrige et je fais évoluer les outils.</p>
+        <div class="preuves">
+          <figure class="outil">
+            <img data-zoom src="assets/outil-calculateur.jpg" width="1600" height="768" loading="lazy" alt="Calculateur de prix de vente des joints Avritec&nbsp;: choix de la forme du joint, des diamètres, de la matière, de l'épaisseur, de la quantité et du coefficient, puis ajout à la demande de prix.">
+            <figcaption><b>Calculateur de prix de vente.</b> Il contient la base des matières et des tarifs, calcule seul le prix de vente de chaque joint et crée les codes article. Il peut aussi importer une demande de prix reçue en PDF, en Excel ou par e-mail. On s'en sert tous les jours pour les devis et on l'améliore presque chaque jour. Un export vers Sage 100, le logiciel de gestion de l'entreprise, est à l'étude&nbsp;: pour l'instant, je finalise le devis dans Sage.</figcaption>
+          </figure>
+          <div class="outils-duo">
+            <figure class="outil">
+              <img data-zoom src="assets/outil-rh.jpg" width="1600" height="762" loading="lazy" alt="Outil RH d'Avritec&nbsp;: page d'accueil d'un salarié avec ses soldes de congés et de RTT, et les menus pour poser une absence, déclarer des heures supplémentaires et consulter le planning de l'équipe.">
+              <figcaption><b>Outil RH.</b> Chaque salarié a son espace&nbsp;: congés, RTT, heures supplémentaires, planning de l'équipe. Lancement très prochainement.</figcaption>
+            </figure>
+            <figure class="outil">
+              <img data-zoom src="assets/outil-evaluation.jpg" width="1600" height="770" loading="lazy" alt="Plateforme d'évaluation d'Avritec&nbsp;: l'espace formation d'un salarié, avec ses formations sur les produits (joints spiralés, PTFE, fibre-élastomère, graphite) et leur statut.">
+              <figcaption><b>Plateforme d'évaluation des salariés.</b> C'est mon projet&nbsp;: l'idée vient de moi et je la développe presque entièrement, avec l'appui de Pierre. Chaque salarié se forme sur les produits, puis passe une évaluation validée à partir de 80&nbsp;% de bonnes réponses. Lancement prochainement.</figcaption>
+            </figure>
+          </div>
         </div>
 
         <h3>Ce que j'en retiens</h3>
@@ -1021,7 +1045,7 @@ footer { background: var(--film); color: var(--film-dim); padding: 0 0 clamp(2re
         <table class="table ac">
           <thead><tr><th scope="col">Apprentissage critique</th><th scope="col">Ma preuve</th><th scope="col">Où j'en suis</th></tr></thead>
           <tbody>
-            <tr><th scope="row"><span class="code">AC22.03</span>Maîtriser les éléments juridiques et comptables de l'offre</th><td><a href="#avritec">Avritec</a>&nbsp;: environ 15 devis par semaine, que je fais seul (prix, conditions, codes article), puis Pierre les vérifie.</td><td><span class="st st-ok">Preuve solide</span></td></tr>
+            <tr><th scope="row"><span class="code">AC22.03</span>Maîtriser les éléments juridiques et comptables de l'offre</th><td><a href="#avritec">Avritec</a>&nbsp;: environ 15 devis par semaine, que je fais seul, puis Pierre les vérifie. Je contrôle ce qui engage l'entreprise&nbsp;: durée de validité de l'offre, conditions de paiement, délai de livraison, frais de port, prix hors taxe et renvoi aux conditions générales de vente. Le prix vient du <a href="#outils">calculateur</a> que nous avons créé, et je vérifie la marge.</td><td><span class="st st-ok">Preuve solide</span></td></tr>
             <tr><th scope="row"><span class="code">AC22.04</span>Utiliser les OAV (feuille de calcul, supports d'argumentation...) à bon escient pour convaincre</th><td><a href="#avritec">Avritec</a>&nbsp;: mes 15 fiches d'appel du 30 octobre servent de support à Pierre pour la prospection, plus de 5 rendez-vous obtenus. Aussi&nbsp;: devis et présentations PowerPoint.</td><td><span class="st st-ok">Preuve solide</span></td></tr>
             <tr><th scope="row"><span class="code">AC22.05</span>Organiser le suivi de ses résultats pour gagner en performance au sein de l'équipe commerciale</th><td><a href="#avritec">Avritec</a>&nbsp;: je prépare les chiffres et le suivi des affaires de chaque commercial pour la business review de l'équipe.</td><td><span class="st st-ok">Preuve solide</span></td></tr>
             <tr><th scope="row"><span class="code">AC22.01</span>Convaincre en exprimant avec empathie l'offre en termes d'avantages personnalisés</th><td><a href="#p-madeleines">Madeleines Jeannette</a>, en 1re année&nbsp;: vente en porte-à-porte et sur des stands avec la méthode CAB, une cinquantaine de ventes. À confirmer au <a href="#p-master">Master de la vente</a> en 2027.</td><td><span class="st st-part">Preuve partielle</span></td></tr>
@@ -1084,6 +1108,7 @@ footer { background: var(--film); color: var(--film-dim); padding: 0 0 clamp(2re
           <li><strong>PowerPoint, Canva, Google Forms.</strong></li>
           <li><strong>Pipedrive et Pharow&nbsp;:</strong> le CRM d'Avritec et l'outil de recherche de prospects, que j'utilise en alternance.</li>
           <li><strong>Outils d'IA&nbsp;:</strong> pour les vidéos produit en 3D et pour préparer les fiches d'appel, que je vérifie.</li>
+          <li><strong>Claude Code&nbsp;:</strong> développement d'outils internes pour Avritec avec Pierre (calculateur de prix, outil RH, plateforme d'évaluation).</li>
           <li><strong>Langues&nbsp;:</strong> anglais B2, espagnol B1.</li>
           <li><strong>Permis B</strong>, véhiculé.</li>
         </ul>
