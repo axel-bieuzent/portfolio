@@ -411,6 +411,19 @@ figcaption { margin-top: .8rem; max-width: 42rem; }
 .bilan-dl dt { font-weight: 750; font-stretch: 85%; font-size: 1.15rem; padding-top: 1.1rem; margin-top: 1.1rem; border-top: 1px solid var(--rule); }
 .bilan-dl dt:first-child { padding-top: 0; margin-top: 0; border-top: 0; }
 .bilan-dl dd { margin-top: .35rem; max-width: 42rem; }
+.grille-wrap { max-width: 34rem; margin: 1.2rem 0 1.4rem; }
+.grille { width: 100%; border-collapse: collapse; font-size: .98rem; }
+.grille caption { text-align: left; font-family: var(--mono, "JetBrains Mono", monospace); font-size: .8rem; color: var(--graphite); padding-bottom: .6rem; }
+.grille th, .grille td { padding: .5rem .6rem .5rem 0; border-bottom: 1px solid var(--rule); text-align: left; font-weight: 450; }
+.grille thead th { font-size: .85rem; font-weight: 600; color: var(--graphite); border-bottom: 1.5px solid var(--ink); }
+.grille td, .grille thead th + th { text-align: right; width: 6.5rem; font-variant-numeric: tabular-nums; }
+.grille td:last-child { font-weight: 650; color: var(--ink); }
+.grille tfoot th, .grille tfoot td { font-weight: 700; border-bottom: 0; padding-top: .7rem; }
+.grille tfoot tr:first-child th, .grille tfoot tr:first-child td { border-top: 1.5px solid var(--ink); }
+.affiches { display: flex; flex-wrap: wrap; gap: clamp(1rem, 2.5vw, 2rem); align-items: flex-start; }
+.affiches .affiche { flex: 1 1 13rem; max-width: 18rem; }
+.mention { font-size: .85rem; color: var(--graphite); }
+@media (max-width: 640px) { .grille td, .grille thead th + th { width: 4.6rem; } .grille th, .grille td { padding-right: .4rem; } }
 .cv-duo { display: grid; grid-template-columns: repeat(2, minmax(0, 18rem)); gap: clamp(1.4rem, 3vw, 2.6rem); padding-top: 1rem; }
 .cv-duo figure { --mo: -9px; }
 .cv-duo img { border: 1px solid var(--rule); background: #fff; }
@@ -755,7 +768,7 @@ footer { background: var(--film); color: var(--film-dim); padding: 0 0 clamp(2re
           <li>Avec Pierre, je crée des outils internes pour l'entreprise avec Claude Code&nbsp;: un calculateur de prix de vente, un outil RH et une plateforme d'évaluation des salariés (captures ci-dessous).</li>
         </ul>
 
-        <h3>Quatre exemples de mon travail</h3>
+        <h3>Cinq exemples de mon travail</h3>
         <div class="preuves">
           <figure class="pv-video">
             <video controls preload="none" playsinline aria-label="Vidéo produit, joint à lèvre en PTFE, 43 secondes" width="1280" height="720" poster="assets/video-produit-poster.jpg">
@@ -782,7 +795,11 @@ footer { background: var(--film); color: var(--film-dim); padding: 0 0 clamp(2re
           </figure>
           <figure class="pv-mail pv-fiche">
             <div class="cadre"><img data-zoom src="assets/fiche-prospect.jpg" width="1242" height="1756" loading="lazy" alt="Fiche d'appel Avritec pour une entreprise de cuves et skids inox&nbsp;: chiffres clés, ce que fait l'entreprise et où vont nos joints, entreprises voisines, objectif de l'appel, cinq questions à poser et l'issue de l'appel. Nom et portable du contact floutés."></div>
-            <figcaption>Une de mes 15 fiches d'appel du 30 octobre 2026. Je choisis l'entreprise avec Pharow. Un outil d'IA rassemble les informations et met la fiche en page&nbsp;; moi, je vérifie les équipements et les joints proposés, la cohérence de la fiche, et j'ajoute les illustrations. Pierre appelle avec la fiche sous les yeux&nbsp;: plus de 5 rendez-vous obtenus à ce jour. Nom et portable du contact floutés.</figcaption>
+            <figcaption>Une de mes 15 fiches d'appel du 30 octobre 2026. Je choisis l'entreprise avec Pharow. Un outil d'IA rassemble les informations et met la fiche en page&nbsp;; moi, je vérifie les équipements et les joints proposés, la cohérence de la fiche, et j'ajoute les illustrations. Pierre appelle avec la fiche sous les yeux&nbsp;: au moins 5 rendez-vous obtenus à ce jour. Nom et portable du contact floutés.</figcaption>
+          </figure>
+          <figure class="pv-mail pv-fiche pv-devis" id="devis">
+            <div class="cadre"><img data-zoom src="assets/devis-annote.jpg" width="1000" height="1413" loading="lazy" alt="Première page d'un devis Avritec annoté de 1 à 5&nbsp;: prix hors taxe selon la quantité, délai de livraison, règlement selon la LME, frais de port et d'emballage, total hors taxe. Client, référence et prix floutés."></div>
+            <figcaption>Un devis que j'ai préparé en septembre 2026 pour un client industriel. Il sort au nom d'un collègue, car mon nom n'est pas encore enregistré dans le logiciel. <b>1</b>&nbsp;Prix hors taxe selon la quantité (il baisse de 3 à 5 pièces). <b>2</b>&nbsp;Délai de livraison. <b>3</b>&nbsp;Règlement selon la LME, la loi qui plafonne les délais de paiement entre entreprises. <b>4</b>&nbsp;Frais de port et d'emballage. <b>5</b>&nbsp;Total hors taxe. Les conditions générales de vente sont jointes en dernière page. Client, référence et prix floutés.</figcaption>
           </figure>
           <figure class="rendus br">
             <div class="rendus-grid br-grid">
@@ -815,7 +832,7 @@ footer { background: var(--film); color: var(--film-dim); padding: 0 0 clamp(2re
 
         <h3>Ce que j'en retiens</h3>
         <p>Ce qui m'a le plus marqué en deux mois, c'est la place du produit. Chez Avritec, on ne peut pas faire un devis ni préparer un appel sans comprendre le joint&nbsp;: sa matière, ses dimensions, son usage chez le client. Pour les vidéos produit, je vérifie chaque détail avec la fiche technique avant de les montrer à mon tuteur. Sur les devis, il m'a fait corriger des erreurs dans les codes article que je crée.</p>
-        <p>Au début, le plus difficile a été le vocabulaire technique et le chiffrage d'un devis seul. Aujourd'hui, j'en fais environ 15 par semaine, que Pierre vérifie. Mes fiches d'appel servent aussi vraiment&nbsp;: sur les 15 du 30 octobre, Pierre a déjà obtenu plus de 5 rendez-vous. Prochaine étape&nbsp;: l'accompagner sur une de ces visites. En novembre, j'ai aussi envoyé mon premier e-mailing aux clients de l'entreprise.</p>
+        <p>Au début, le plus difficile a été le vocabulaire technique et le chiffrage d'un devis seul. Aujourd'hui, j'en fais environ 15 par semaine, que Pierre vérifie. Mes fiches d'appel servent aussi vraiment&nbsp;: sur les 15 du 30 octobre, Pierre a déjà obtenu au moins 5 rendez-vous. Prochaine étape&nbsp;: l'accompagner sur une de ces visites. En novembre, j'ai aussi envoyé mon premier e-mailing aux clients de l'entreprise.</p>
       </div>
     </div>
   </div>
@@ -916,11 +933,18 @@ footer { background: var(--film); color: var(--film-dim); padding: 0 0 clamp(2re
         <div class="projet-c">
           <p><span class="etat">Soutenance le 27 novembre 2026</span></p>
           <p>Un plan de communication pour relancer les BB crèmes et les CC crèmes de la marque Charlotte Bio. Le message principal, «&nbsp;Prête en 2 minutes&nbsp;», vient du brief de la marque. Ci-dessous, l'affiche A3 de la campagne, réalisée en groupe.</p>
-          <p>Dans le groupe, j'ai surtout travaillé sur la cible, la stratégie et l'affiche. J'ai aussi fait une grande partie des slides et organisé les relevés en pharmacie.</p>
-          <figure class="affiche">
-            <div class="cadre"><img data-zoom src="assets/affiche-trouve-ton-match.jpg" width="900" height="1272" loading="lazy" alt="Affiche «&nbsp;6 matchs possibles. Le tien est ici.&nbsp;»&nbsp;: les trois teintes de BB crème et de CC crème Charlotte Bio, avec un QR code vers un quiz pour trouver sa teinte. Mention&nbsp;: maquette étudiante, non affiliée à Charlotte Bio."></div>
-            <figcaption>Maquette étudiante, non affiliée à la marque.</figcaption>
-          </figure>
+          <p>Dans le groupe, j'ai surtout travaillé sur la cible, la stratégie et l'affiche. J'ai aussi fait une grande partie des slides, organisé les relevés en pharmacie et réalisé la maquette du carrousel Instagram de la campagne.</p>
+          <div class="affiches">
+            <figure class="affiche">
+              <div class="cadre"><img data-zoom src="assets/affiche-trouve-ton-match.jpg" width="900" height="1272" loading="lazy" alt="Affiche «&nbsp;6 matchs possibles. Le tien est ici.&nbsp;»&nbsp;: les trois teintes de BB crème et de CC crème Charlotte Bio, avec un QR code vers un quiz pour trouver sa teinte. Mention&nbsp;: maquette étudiante, non affiliée à Charlotte Bio."></div>
+              <figcaption>L'affiche A3, réalisée en groupe.</figcaption>
+            </figure>
+            <figure class="affiche">
+              <div class="cadre"><img data-zoom src="assets/insta-trouve-ton-match.jpg" width="700" height="1419" loading="lazy" alt="Maquette du premier visuel du carrousel Instagram de Charlotte Bio&nbsp;: «&nbsp;Quelque chose change le 10 janvier.&nbsp;», avec un tube de crème en gros plan."></div>
+              <figcaption>Le carrousel Instagram, que j'ai réalisé.</figcaption>
+            </figure>
+          </div>
+          <p class="mention">Maquettes étudiantes, non affiliées à la marque.</p>
           <p class="comp">Compétence BUT&nbsp;: <b>Communiquer l'offre commerciale</b></p>
         </div>
       </article>
@@ -1046,8 +1070,8 @@ footer { background: var(--film); color: var(--film-dim); padding: 0 0 clamp(2re
         <table class="table ac">
           <thead><tr><th scope="col">Apprentissage critique</th><th scope="col">Ma preuve</th><th scope="col">Où j'en suis</th></tr></thead>
           <tbody>
-            <tr><th scope="row"><span class="code">AC22.03</span>Maîtriser les éléments juridiques et comptables de l'offre</th><td><a href="#avritec">Avritec</a>&nbsp;: environ 15 devis par semaine, que je fais seul, puis Pierre les vérifie. Je contrôle ce qui engage l'entreprise&nbsp;: durée de validité de l'offre, conditions de paiement, délai de livraison, frais de port, prix hors taxe et renvoi aux conditions générales de vente. Le prix vient du <a href="#outils">calculateur</a> que nous avons créé, et je vérifie la marge.</td><td><span class="st st-ok">Preuve solide</span></td></tr>
-            <tr><th scope="row"><span class="code">AC22.04</span>Utiliser les OAV (feuille de calcul, supports d'argumentation...) à bon escient pour convaincre</th><td><a href="#avritec">Avritec</a>&nbsp;: mes 15 fiches d'appel du 30 octobre servent de support à Pierre pour la prospection, plus de 5 rendez-vous obtenus. Aussi&nbsp;: devis et présentations PowerPoint.</td><td><span class="st st-ok">Preuve solide</span></td></tr>
+            <tr><th scope="row"><span class="code">AC22.03</span>Maîtriser les éléments juridiques et comptables de l'offre</th><td><a href="#avritec">Avritec</a>&nbsp;: environ 15 devis par semaine, que je prépare, puis Pierre les vérifie. Je contrôle ce qui engage l'entreprise&nbsp;: durée de validité de l'offre, conditions de paiement selon la LME, délai de livraison, frais de port, prix hors taxe et conditions générales de vente jointes (<a href="#devis">un devis annoté</a>). Le prix vient du <a href="#outils">calculateur</a>&nbsp;: je vérifie le coefficient appliqué au prix d'achat de la matière, donc la marge.</td><td><span class="st st-ok">Preuve solide</span></td></tr>
+            <tr><th scope="row"><span class="code">AC22.04</span>Utiliser les OAV (feuille de calcul, supports d'argumentation...) à bon escient pour convaincre</th><td><a href="#avritec">Avritec</a>&nbsp;: mes 15 fiches d'appel du 30 octobre servent de support à Pierre pour la prospection, au moins 5 rendez-vous obtenus. Aussi&nbsp;: devis et présentations PowerPoint.</td><td><span class="st st-ok">Preuve solide</span></td></tr>
             <tr><th scope="row"><span class="code">AC22.05</span>Organiser le suivi de ses résultats pour gagner en performance au sein de l'équipe commerciale</th><td><a href="#avritec">Avritec</a>&nbsp;: je prépare les chiffres et le suivi des affaires de chaque commercial pour la business review de l'équipe.</td><td><span class="st st-ok">Preuve solide</span></td></tr>
             <tr><th scope="row"><span class="code">AC22.01</span>Convaincre en exprimant avec empathie l'offre en termes d'avantages personnalisés</th><td><a href="#p-madeleines">Madeleines Jeannette</a>, en 1re année&nbsp;: vente en porte-à-porte et sur des stands avec la méthode CAB, une cinquantaine de ventes. À confirmer au <a href="#p-master">Master de la vente</a> en 2027.</td><td><span class="st st-part">Preuve partielle</span></td></tr>
             <tr><th scope="row"><span class="code">AC22.02</span>Négocier le prix&nbsp;: défendre, valoriser l'offre en percevant les stratégies d'achat</th><td>Vinted&nbsp;: plus de 150 ventes en deux ans, avec négociation des prix. Stage achats chez SNV Pont Morin&nbsp;: j'ai vu la négociation côté acheteur.</td><td><span class="st st-part">Preuve partielle</span></td></tr>
@@ -1065,7 +1089,7 @@ footer { background: var(--film); color: var(--film-dim); padding: 0 0 clamp(2re
           <tbody>
             <tr><th scope="row"><span class="code">AC23.01</span>Élaborer une stratégie de communication adaptée au brief agence</th><td><a href="#p-charlotte">Trouve ton match</a>&nbsp;: j'ai surtout travaillé sur la cible, la stratégie et l'affiche. Soutenance le 27 novembre.</td><td><span class="st st-part">Preuve partielle</span></td></tr>
             <tr><th scope="row"><span class="code">AC23.03</span>Proposer un plan de com 360° en élaborant les supports et en veillant à leur efficacité</th><td><a href="#film">Sous presse</a>, <a href="#avritec">e-mailing et vidéos produit</a>&nbsp;: les supports sont faits et un fabricant partenaire veut publier les vidéos. Je n'ai pas encore mesuré leur efficacité.</td><td><span class="st st-part">Preuve partielle</span></td></tr>
-            <tr><th scope="row"><span class="code">AC23.04</span>Mettre en œuvre une stratégie digitale&nbsp;: blog, réseaux sociaux, influenceurs, en mesurant leurs performances et en veillant à l'e-réputation</th><td>Ce portfolio, mon profil LinkedIn à jour (je publie rarement) et ma réputation sur Vinted&nbsp;: 5 étoiles pour plus de 150 ventes, aucun litige. Les vidéos produit vont être publiées sur LinkedIn.</td><td><span class="st st-part">Preuve partielle</span></td></tr>
+            <tr><th scope="row"><span class="code">AC23.04</span>Mettre en œuvre une stratégie digitale&nbsp;: blog, réseaux sociaux, influenceurs, en mesurant leurs performances et en veillant à l'e-réputation</th><td><a href="#p-charlotte">Trouve ton match</a>&nbsp;: j'ai réalisé la maquette du carrousel Instagram de la campagne. Ce portfolio, mon profil LinkedIn à jour (je publie rarement) et ma réputation sur Vinted&nbsp;: 5 étoiles pour plus de 150 ventes, aucun litige. Les vidéos produit vont être publiées sur LinkedIn.</td><td><span class="st st-part">Preuve partielle</span></td></tr>
             <tr><th scope="row"><span class="code">AC23.02</span>Établir une stratégie de moyens en utilisant les indicateurs de choix des supports</th><td>Rien encore cette année.</td><td><span class="st st-non">Pas encore de preuve</span></td></tr>
           </tbody>
         </table>
@@ -1078,9 +1102,9 @@ footer { background: var(--film); color: var(--film-dim); padding: 0 0 clamp(2re
         <table class="table ac">
           <thead><tr><th scope="col">Apprentissage critique</th><th scope="col">Ma preuve</th><th scope="col">Où j'en suis</th></tr></thead>
           <tbody>
-            <tr><th scope="row"><span class="code">AC24.02</span>Mesurer l'importance du choix des cibles commerciales</th><td><a href="#avritec">Avritec</a>&nbsp;: Pierre choisit les secteurs, je trouve les entreprises avec Pharow. 15 fiches d'appel le 30 octobre, plus de 5 rendez-vous obtenus.</td><td><span class="st st-ok">Preuve solide</span></td></tr>
+            <tr><th scope="row"><span class="code">AC24.02</span>Mesurer l'importance du choix des cibles commerciales</th><td><a href="#avritec">Avritec</a>&nbsp;: Pierre choisit les secteurs, je trouve les entreprises avec Pharow. 15 fiches d'appel le 30 octobre, au moins 5 rendez-vous obtenus.</td><td><span class="st st-ok">Preuve solide</span></td></tr>
             <tr><th scope="row"><span class="code">AC24.03</span>Travailler en équipe tout en respectant le rôle de chacun</th><td><a href="#p-banque">Du grand compte à l'artisan</a> (je m'occupais du terrain) et <a href="#p-immo">dossier immobilier</a> (j'écris mes parties).</td><td><span class="st st-ok">Preuve solide</span></td></tr>
-            <tr><th scope="row"><span class="code">AC24.04</span>Adapter l'offre à une demande client</th><td><a href="#avritec">Avritec</a>&nbsp;: environ 15 devis par semaine, où je choisis le joint adapté à chaque demande. <a href="#p-immo">Pack «&nbsp;Vendeur serein&nbsp;»</a>.</td><td><span class="st st-ok">Preuve solide</span></td></tr>
+            <tr><th scope="row"><span class="code">AC24.04</span>Adapter l'offre à une demande client</th><td><a href="#avritec">Avritec</a>&nbsp;: environ 15 devis par semaine, où je choisis le joint adapté à chaque demande (<a href="#devis">un devis annoté</a>). <a href="#p-immo">Pack «&nbsp;Vendeur serein&nbsp;»</a>.</td><td><span class="st st-ok">Preuve solide</span></td></tr>
             <tr><th scope="row"><span class="code">AC24.01</span>Réaliser un diagnostic avant la mise en place d'actions commerciales</th><td><a href="#avritec">Fiches d'appel</a>&nbsp;: chaque fiche commence par un diagnostic du prospect, dont je vérifie les équipements. <a href="#p-charlotte">Trouve ton match</a>&nbsp;: relevés en pharmacie.</td><td><span class="st st-part">Preuve partielle</span></td></tr>
           </tbody>
         </table>
@@ -1093,7 +1117,7 @@ footer { background: var(--film); color: var(--film-dim); padding: 0 0 clamp(2re
         <table class="table ac">
           <thead><tr><th scope="col">Apprentissage critique</th><th scope="col">Ma preuve</th><th scope="col">Où j'en suis</th></tr></thead>
           <tbody>
-            <tr><th scope="row"><span class="code">AC25.01</span>Intégrer la satisfaction client dans la réussite de la relation commerciale et la réputation de l'entreprise</th><td><a href="#avritec">Avritec</a>&nbsp;: l'entreprise est reconnue par ses clients pour sa réactivité et sa gestion des urgences, une valeur que je partage. Vinted&nbsp;: je l'applique à mon échelle, avec des colis expédiés dans la demi-heure, 5 étoiles pour plus de 150 ventes et aucun litige. <a href="#p-immo">Dossier immobilier</a>&nbsp;: ce que les clients attendent des agences.</td><td><span class="st st-ok">Preuve solide</span></td></tr>
+            <tr><th scope="row"><span class="code">AC25.01</span>Intégrer la satisfaction client dans la réussite de la relation commerciale et la réputation de l'entreprise</th><td><a href="#avritec">Avritec</a>&nbsp;: l'entreprise est reconnue par ses clients pour sa réactivité et sa gestion des urgences, une valeur que je partage. Vinted&nbsp;: je l'applique à mon échelle, avec des colis expédiés dans la demi-heure, 5 étoiles pour plus de 150 ventes et aucun litige. <a href="#p-immo">Dossier immobilier</a>&nbsp;: ce que les clients attendent des agences. Dossier de relation client&nbsp;: une enquête de satisfaction pour Decathlon, en groupe de quatre, 20 réponses au 4 novembre.</td><td><span class="st st-ok">Preuve solide</span></td></tr>
             <tr><th scope="row"><span class="code">AC25.02</span>Piloter sa relation client au moyen d'indicateurs</th><td><a href="#avritec">Avritec</a>&nbsp;: je lis les tableaux de bord Pipedrive et je prépare les indicateurs de la business review (affaires créées, visites, relances datées).</td><td><span class="st st-part">Preuve partielle</span></td></tr>
             <tr><th scope="row"><span class="code">AC25.04</span>Exploiter de façon pertinente les outils de la relation client</th><td><a href="#avritec">Avritec</a>&nbsp;: dans Pipedrive, je crée des affaires et des rappels, j'envoie les e-mailings et je lis les tableaux de bord. J'apprends encore à m'en servir pleinement.</td><td><span class="st st-part">Preuve partielle</span></td></tr>
             <tr><th scope="row"><span class="code">AC25.03</span>Traiter les réclamations client pour optimiser l'activité</th><td>Chez Avritec, j'ai suivi une réclamation (un joint taché, pour un client pharmaceutique) sans la gérer moi-même. Sur Vinted, je réponds vite et je n'ai jamais eu de litige. Traiter une réclamation de A à Z est un de mes objectifs de l'année.</td><td><span class="st st-non">Pas encore de preuve</span></td></tr>
@@ -1132,11 +1156,17 @@ footer { background: var(--film); color: var(--film-dim); padding: 0 0 clamp(2re
         <div class="bloc-c">
           <dl class="bilan-dl">
             <dt>Ce que j'ai fait</dt>
-            <dd>Une étude de marché quantitative pour les fondateurs de KidLib, une plateforme qui met en relation des parents et des assistantes maternelles pour des gardes urgentes. J'étais responsable de la diffusion du questionnaire&nbsp;: nous avons obtenu 1&nbsp;119 réponses, puis présenté les résultats aux fondateurs.</dd>
+            <dd>Au S2, en équipe de quatre, une étude de marché quantitative pour les fondateurs de KidLib, une plateforme qui met en relation des parents et des assistantes maternelles pour des gardes urgentes. J'étais responsable de la diffusion du questionnaire&nbsp;: nous avons obtenu 1&nbsp;119 réponses, puis analysé les résultats et les avons présentés aux fondateurs.</dd>
+            <dt>Pourquoi j'en suis fier</dt>
+            <dd>Notre étude a vraiment servi&nbsp;: les fondateurs l'ont utilisée pour leur projet et nous ont remerciés. Ils nous ont même invités à leur présentation lors d'un concours de start-up dans une école de commerce, mais nous n'avons pas pu y aller, c'était pendant les vacances. Notre professeur, M.&nbsp;Geslin, a lui aussi salué le travail.</dd>
             <dt>Compétences et connaissances</dt>
-            <dd>Conduire les actions marketing, niveau 1&nbsp;: «&nbsp;Mettre en œuvre une étude de marché dans un environnement simple&nbsp;». Construire un questionnaire, le diffuser, analyser les réponses et les présenter à l'oral.</dd>
-            <dt>Qualités révélées</dt>
-            <dd>Pour obtenir autant de réponses, j'ai diffusé le questionnaire sur Facebook, là où se trouvent beaucoup de parents, la cible de KidLib. Cela montre mon sens de l'initiative&nbsp;: aller chercher la cible là où elle est. C'est la même logique que j'applique aujourd'hui chez Avritec quand je choisis les entreprises à démarcher.</dd>
+            <dd>Conduire les actions marketing, niveau 1, AC11.02&nbsp;: «&nbsp;Mettre en œuvre une étude de marché dans un environnement simple&nbsp;». Construire un questionnaire, choisir où le diffuser, analyser et segmenter les réponses, puis les présenter à l'oral.</dd>
+            <dt>Qualités exploitées, révélées et mises en valeur</dt>
+            <dd><ul class="retenu">
+              <li><b>Exploitée, le sens de l'initiative</b>&nbsp;: diffuser le questionnaire sur Facebook, là où se trouvent les parents, la cible de KidLib. C'est la même logique que j'applique chez Avritec quand je choisis les entreprises à démarcher.</li>
+              <li><b>Révélée, la persévérance</b>&nbsp;: continuer la diffusion pour aller chercher un maximum de réponses, jusqu'à 1&nbsp;119.</li>
+              <li><b>Mise en valeur, l'organisation</b>&nbsp;: coordonner la diffusion au sein d'une équipe de quatre.</li>
+            </ul></dd>
           </dl>
         </div>
       </div>
@@ -1144,13 +1174,34 @@ footer { background: var(--film); color: var(--film-dim); padding: 0 0 clamp(2re
       <div class="bloc">
         <h3>Mon CV et ma lettre, avant et après</h3>
         <div class="bloc-c">
-          <p>J'ai noté mon ancien CV avec la grille d'auto-évaluation donnée en cours, puis je l'ai refait. Ce que j'ai corrigé&nbsp;:</p>
+          <p>J'ai noté mon ancien CV avec la grille d'auto-évaluation donnée en cours, puis je l'ai refait et noté à nouveau.</p>
+          <div class="grille-wrap"><table class="grille">
+            <caption>Grille d'auto-évaluation du CV, chaque critère noté sur 10</caption>
+            <thead><tr><th scope="col">Critère</th><th scope="col">Ancien CV</th><th scope="col">Nouveau CV</th></tr></thead>
+            <tbody>
+              <tr><th scope="row">1. Allure générale</th><td>6</td><td>9</td></tr>
+              <tr><th scope="row">2. Présentation</th><td>5</td><td>9</td></tr>
+              <tr><th scope="row">3. Renseignements personnels</th><td>5</td><td>9</td></tr>
+              <tr><th scope="row">4. Longueur</th><td>7</td><td>9</td></tr>
+              <tr><th scope="row">5. Qualité rédactionnelle</th><td>5</td><td>9</td></tr>
+              <tr><th scope="row">6. Expression du profil</th><td>6</td><td>9</td></tr>
+              <tr><th scope="row">7. Dynamisme (verbes d'action)</th><td>4</td><td>9</td></tr>
+              <tr><th scope="row">8. Précision et résultats</th><td>3</td><td>8</td></tr>
+              <tr><th scope="row">9. Intégralité</th><td>5</td><td>8</td></tr>
+            </tbody>
+            <tfoot>
+              <tr><th scope="row">Total sur 90</th><td>46</td><td>79</td></tr>
+              <tr><th scope="row">Mes chances d'obtenir un entretien</th><td>40&nbsp;%</td><td>85&nbsp;%</td></tr>
+            </tfoot>
+          </table></div>
+          <p>Ce que j'ai corrigé&nbsp;:</p>
           <ul class="retenu">
             <li>Il disait «&nbsp;alternance actée&nbsp;» et ne montrait pas l'alternance&nbsp;: elle est maintenant ma première expérience, avec mes missions.</li>
             <li>La formation était écrite en un seul bloc&nbsp;: une ligne par diplôme, avec le parcours BDMRC.</li>
             <li>Fautes d'accents et d'espaces (Egypte, Republique, AOUT, FEVRIER, «&nbsp;tri,classement&nbsp;»)&nbsp;: corrigées.</li>
             <li>Pas de LinkedIn ni de portfolio&nbsp;: ajoutés.</li>
             <li>Aucun résultat chiffré&nbsp;: ajout de mes projets de BUT avec leurs résultats (1&nbsp;119 et 52 réponses).</li>
+            <li>Des missions écrites sans verbe&nbsp;: elles commencent maintenant par un verbe d'action (chiffrer, préparer, concevoir), avec des chiffres.</li>
             <li>Adresse postale retirée, car le CV est public sur ce site.</li>
           </ul>
           <p>J'ai aussi réécrit ma lettre de motivation. Celle de mai servait à choisir le parcours BDMRC. La nouvelle prépare ma poursuite d'études&nbsp;: elle vise le master Marketing, vente de l'IAE Caen, en alternance, et s'appuie sur ce que je fais chez Avritec. <a href="LM_Master_IAE_Caen_Axel_Bieuzent.pdf" target="_blank" rel="noopener">Lire la nouvelle lettre (PDF)</a>.</p>
