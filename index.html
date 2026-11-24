@@ -360,7 +360,7 @@ figcaption { margin-top: .8rem; max-width: 42rem; }
 .projet + .projet { margin-top: 0; }
 .bloc .lines li:first-child { border-top: 0; padding-top: 0; }
 .projet {
-  position: relative; display: grid; grid-template-columns: 3.5rem minmax(0, 4fr) minmax(0, 7fr);
+  position: relative; display: grid; grid-template-columns: minmax(0, 4fr) minmax(0, 7fr);
   gap: 1rem clamp(1.5rem, 3.5vw, 3.5rem); padding: clamp(1.6rem, 3vw, 2.4rem) 0; border-bottom: 1px solid var(--rule);
   --mk: var(--ink); --mo: 0px; --ml: 14px;
 }
@@ -370,9 +370,6 @@ figcaption { margin-top: .8rem; max-width: 42rem; }
 .projet h4 { font-weight: 800; font-stretch: 72%; font-size: clamp(1.6rem, 2.6vw, 2.3rem); line-height: 1; }
 .projet p { max-width: 42rem; }
 .projet h4.h-logo img { display: block; height: clamp(3rem, 4.6vw, 4rem); width: auto; }
-.picto { display: block; width: 48px; height: 48px; fill: none; stroke: var(--ink); stroke-width: 1.6; stroke-linejoin: round; stroke-linecap: round; transition: transform .25s ease; }
-.picto .o { stroke: var(--press-ink); }
-@media (hover: hover) and (pointer: fine) { .projet:hover .picto { transform: translateY(-2px); } }
 .affiche { max-width: 20rem; --mo: -9px; }
 .affiche img { border: 1px solid var(--rule); }
 /* Compétences : le tableau de contrôle */
@@ -536,8 +533,7 @@ footer { background: var(--film); color: var(--film-dim); padding: 0 0 clamp(2re
   .salle { grid-template-columns: minmax(0, 1fr); justify-items: center; gap: 3rem; }
   .ecran { order: -1; }
   .salle-txt, .generique { width: 100%; max-width: 36rem; }
-  .projet { grid-template-columns: 3.5rem minmax(0, 1fr); }
-  .projet-c { grid-column: 2; }
+  .projet { grid-template-columns: minmax(0, 1fr); }
   .steps { grid-template-columns: minmax(0, 1fr); }
   .steps::after { display: none; }
   .steps li { display: grid; grid-template-columns: 4.2rem minmax(0, 1fr); gap: 1rem; padding: 1.1rem 0; border-top: 0; border-bottom: 1px solid var(--rule); }
@@ -575,7 +571,6 @@ footer { background: var(--film); color: var(--film-dim); padding: 0 0 clamp(2re
   .sec-head { margin-bottom: 2.4rem; }
   .projet { grid-template-columns: minmax(0, 1fr); gap: .9rem; }
   .projet-c { grid-column: auto; }
-  .picto { width: 40px; height: 40px; }
   .rendus-grid, .strip-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .strip-grid { padding-top: 34px; padding-bottom: 34px; }
   .strip-grid::before { top: 11px; }
@@ -906,7 +901,6 @@ footer { background: var(--film); color: var(--film-dim); padding: 0 0 clamp(2re
       <h3 class="an">2e année</h3>
 
       <article class="projet cadre" id="p-banque">
-        <svg class="picto" viewBox="0 0 48 48" aria-hidden="true"><rect x="5" y="6" width="15" height="36"/><path d="M9 12h7M9 18h7M9 24h7M9 30h7"/><rect x="26" y="24" width="17" height="18"/><path class="o" d="M24 24h21l-2-6H26z"/><path d="M32 42v-8h5v8M3 42h42"/></svg>
         <div class="projet-t">
           <h4>Du grand compte à l'artisan</h4>
           <p class="meta">Marketing B2B, dossier et oral, groupe de cinq, novembre 2026</p>
@@ -919,7 +913,6 @@ footer { background: var(--film); color: var(--film-dim); padding: 0 0 clamp(2re
       </article>
 
       <article class="projet cadre" id="p-immo">
-        <svg class="picto" viewBox="0 0 48 48" aria-hidden="true"><path d="M5 22 19 10l14 12"/><path d="M9 19v20h20V19"/><path d="M16 39v-9h6v9"/><circle class="o" cx="38" cy="27" r="4"/><path class="o" d="M38 31v11M38 36h3M38 40h2"/></svg>
         <div class="projet-t">
           <h4>Les agences immobilières de l'Ouest</h4>
           <p class="meta">SAÉ, dossier écrit, groupe de cinq</p>
@@ -933,7 +926,6 @@ footer { background: var(--film); color: var(--film-dim); padding: 0 0 clamp(2re
       </article>
 
       <article class="projet cadre" id="p-charlotte">
-        <svg class="picto" viewBox="0 0 48 48" aria-hidden="true"><path d="M17 7h14v25l-2 7h-10l-2-7z"/><path d="M20 39h8v3h-8z"/><path class="o" d="M17 18h14"/><path d="M21 24h6"/></svg>
         <div class="projet-t">
           <h4>Trouve ton match</h4>
           <p class="meta">SAÉ, plan de communication, en groupe</p>
@@ -968,7 +960,6 @@ footer { background: var(--film); color: var(--film-dim); padding: 0 0 clamp(2re
       </article>
 
       <article class="projet cadre" id="p-master">
-        <svg class="picto" viewBox="0 0 48 48" aria-hidden="true"><path d="M5 9h23v14H14l-6 5v-5H5z"/><path class="o" d="M20 27h23v12h-3v5l-6-5H20z"/></svg>
         <div class="projet-t">
           <h4>Master de la vente</h4>
           <p class="meta">Épreuves orales en binôme</p>
@@ -1005,7 +996,6 @@ footer { background: var(--film); color: var(--film-dim); padding: 0 0 clamp(2re
       <h3 class="an">1re année</h3>
 
       <article class="projet cadre" id="p-kidlib">
-        <svg class="picto" viewBox="0 0 48 48" aria-hidden="true"><rect x="10" y="8" width="27" height="34" rx="2"/><path d="M18 5h11v6H18z"/><path class="o" d="M15 19l2 2 4-4M15 28l2 2 4-4M15 37l2 2 4-4"/><path d="M25 20h7M25 29h7M25 38h7"/></svg>
         <div class="projet-t">
           <h4>KidLib</h4>
           <p class="meta">Étude de marché pour une start-up, en équipe</p>
@@ -1017,7 +1007,6 @@ footer { background: var(--film); color: var(--film-dim); padding: 0 0 clamp(2re
       </article>
 
       <article class="projet cadre" id="p-madeleines">
-        <svg class="picto" viewBox="0 0 48 48" aria-hidden="true"><path d="M7 33c0-11 7-20 17-20s17 9 17 20c0 3-2 5-5 5H12c-3 0-5-2-5-5z"/><path d="M24 14v23M17 16l3 21M31 16l-3 21M11 23l5 14M37 23l-5 14"/><path class="o" d="M9 43h30"/></svg>
         <div class="projet-t">
           <h4 class="h-logo"><img src="assets/logo-jeannette.png" width="495" height="160" alt="Madeleines Jeannette"></h4>
           <p class="meta">SAÉ vente</p>
@@ -1026,7 +1015,7 @@ footer { background: var(--film); color: var(--film-dim); padding: 0 0 clamp(2re
           <p>Vente en conditions réelles des madeleines Jeannette, la biscuiterie caennaise, au profit du <strong>Centre François Baclesse</strong>&nbsp;: le bénéfice finançait l'étude clinique TRIPLEX sur le cancer du sein triple négatif. Ce n'était pas qu'un exercice commercial. Chaque boîte vendue soutenait la recherche, et c'est devenu notre premier argument face aux clients.</p>
           <p>Nous avons vendu en porte-à-porte, sur des stands, à nos proches, à la maison de quartier de Venoix et dans une épicerie locale, avec la méthode CAB (caractéristique, avantage, bénéfice). J'ai vendu une cinquantaine de boîtes et de coffrets.</p>
           <ul class="lines">
-            <li><strong>1&nbsp;900&nbsp;€</strong> de chiffre d'affaires pour notre équipe.</li>
+            <li><strong>2&nbsp;500&nbsp;€</strong> de chiffre d'affaires pour notre équipe, au-dessus de la moyenne de la promotion (environ 2&nbsp;400&nbsp;€ par équipe).</li>
             <li><strong>60&nbsp;000&nbsp;€</strong> de chiffre d'affaires pour toute la promotion (25 équipes), soit près de 5&nbsp;000 boîtes et 96&nbsp;000 madeleines.</li>
             <li><strong>16&nbsp;972&nbsp;€</strong> reversés au Centre Baclesse le 31 mars 2026, un record pour cette opération.</li>
           </ul>
@@ -1036,7 +1025,6 @@ footer { background: var(--film); color: var(--film-dim); padding: 0 0 clamp(2re
       </article>
 
       <article class="projet cadre" id="p-prisunic">
-        <svg class="picto" viewBox="0 0 48 48" aria-hidden="true"><path d="M9 16h30l-2 27H11z"/><path class="o" d="M18 16v-3a6 6 0 0 1 12 0v3"/></svg>
         <div class="projet-t">
           <h4 class="h-logo"><img src="assets/logo-prisunic.png" width="365" height="110" alt="Relancer Prisunic"></h4>
           <p class="meta">SAÉ marketing et communication de fin d'année</p>
@@ -1048,7 +1036,6 @@ footer { background: var(--film); color: var(--film-dim); padding: 0 0 clamp(2re
       </article>
 
       <article class="projet cadre" id="p-rayon">
-        <svg class="picto" viewBox="0 0 48 48" aria-hidden="true"><path d="M4 27h40M4 43h40"/><path d="M9 27V17l2-3v-3h3v3l2 3v10M31 27V17l2-3v-3h3v3l2 3v10"/><path class="o" d="M20 27V17l2-3v-3h3v3l2 3v10"/><rect x="9" y="33" width="12" height="10"/><rect x="25" y="33" width="12" height="10"/></svg>
         <div class="projet-t">
           <h4>Le rayon eau minérale</h4>
           <p class="meta">SAÉ transverse, en équipe</p>
@@ -1060,7 +1047,6 @@ footer { background: var(--film); color: var(--film-dim); padding: 0 0 clamp(2re
       </article>
 
       <article class="projet cadre" id="p-stage">
-        <svg class="picto" viewBox="0 0 48 48" aria-hidden="true"><rect x="5" y="13" width="34" height="24" rx="1"/><path d="M5 14l17 12 17-12"/><circle class="o" cx="39" cy="13" r="5"/></svg>
         <div class="projet-t">
           <h4>Trouver mon stage</h4>
           <p class="meta">Recherche du stage de 1re année</p>
@@ -1120,7 +1106,7 @@ footer { background: var(--film); color: var(--film-dim); padding: 0 0 clamp(2re
             <tr><th scope="row"><span class="code">AC22.04</span>Utiliser les OAV (feuille de calcul, supports d'argumentation...) à bon escient pour convaincre</th><td><a href="#avritec">Avritec</a>&nbsp;: mes 15 fiches d'appel du 30 octobre servent de support à mon tuteur pour la prospection, au moins 5 rendez-vous obtenus. Aussi&nbsp;: devis et présentations PowerPoint. <a href="#p-master">Master de la vente</a>&nbsp;: une plaquette et une application iPad de découverte, préparées en binôme pour l'entretien du 8 janvier.</td><td><span class="st st-ok">Preuve solide</span></td></tr>
             <tr><th scope="row"><span class="code">AC22.05</span>Organiser le suivi de ses résultats pour gagner en performance au sein de l'équipe commerciale</th><td><a href="#avritec">Avritec</a>&nbsp;: je prépare les chiffres et le suivi des affaires de chaque commercial pour la business review de l'équipe.</td><td><span class="st st-ok">Preuve solide</span></td></tr>
             <tr><th scope="row"><span class="code">AC22.06</span>Prendre en compte les enjeux de la fonction achat pour la performance économique de l'entreprise</th><td><a href="#avritec">Avritec</a>&nbsp;: pour les joints en achat-revente, je vérifie les prix d'achat des fournisseurs avant d'appliquer le coefficient. Sur mes fiches d'appel, la première question est «&nbsp;Qui achète les joints&nbsp;?&nbsp;». Stage achats chez SNV Pont Morin&nbsp;: besoins, fournisseurs, négociations.</td><td><span class="st st-ok">Preuve solide</span></td></tr>
-            <tr><th scope="row"><span class="code">AC22.01</span>Convaincre en exprimant avec empathie l'offre en termes d'avantages personnalisés</th><td><a href="#p-madeleines">Madeleines Jeannette</a>, en 1re année&nbsp;: vente au profit du Centre Baclesse, avec la méthode CAB&nbsp;: une cinquantaine de ventes et 1&nbsp;900&nbsp;€ de chiffre d'affaires pour notre équipe. À confirmer au <a href="#p-master">Master de la vente</a> en 2027.</td><td><span class="st st-part">Preuve partielle</span></td></tr>
+            <tr><th scope="row"><span class="code">AC22.01</span>Convaincre en exprimant avec empathie l'offre en termes d'avantages personnalisés</th><td><a href="#p-madeleines">Madeleines Jeannette</a>, en 1re année&nbsp;: vente au profit du Centre Baclesse, avec la méthode CAB&nbsp;: une cinquantaine de ventes et 2&nbsp;500&nbsp;€ de chiffre d'affaires pour notre équipe. À confirmer au <a href="#p-master">Master de la vente</a> en 2027.</td><td><span class="st st-part">Preuve partielle</span></td></tr>
             <tr><th scope="row"><span class="code">AC22.02</span>Négocier le prix&nbsp;: défendre, valoriser l'offre en percevant les stratégies d'achat</th><td><a href="#avritec">Avritec</a>&nbsp;: quand un client discute le prix, je défends l'offre, et selon le volume commandé je peux accorder le franco de port sur le devis. <a href="#p-vinted">Vinted</a>&nbsp;: plus de 150 ventes en deux ans, avec négociation des prix. Stage achats chez SNV Pont Morin&nbsp;: j'ai vu la négociation côté acheteur.</td><td><span class="st st-part">Preuve partielle</span></td></tr>
           </tbody>
         </table>
