@@ -371,6 +371,11 @@ figcaption { margin-top: .8rem; max-width: 42rem; }
 .projet p { max-width: 42rem; }
 .projet h4.h-logo img { display: block; height: clamp(3rem, 4.6vw, 4rem); width: auto; }
 .affiche { max-width: 20rem; --mo: -9px; }
+.fondu { margin-top: 2rem; }
+.fondu img { display: block; width: 100%; height: auto; -webkit-mask-image: linear-gradient(to bottom, #000 62%, transparent 100%); mask-image: linear-gradient(to bottom, #000 62%, transparent 100%); }
+.fondu figcaption { margin-top: -.4rem; }
+.fig-pipe { margin-top: 1.6rem; }
+.fig-pipe img { display: block; width: 100%; height: auto; }
 .affiche img { border: 1px solid var(--rule); }
 /* Compétences : le tableau de contrôle */
 .board { border: 2px solid var(--ink); background: var(--sheet); margin-bottom: clamp(3.5rem, 7vw, 6rem); }
@@ -755,6 +760,10 @@ footer { background: var(--film); color: var(--film-dim); padding: 0 0 clamp(2re
           <div class="cadre"><img data-zoom src="assets/atelier-controle.jpg" width="720" height="1280" loading="lazy" alt="Contrôle d'un joint découpé en PTFE de 2&nbsp;mm d'épaisseur, coté 71&nbsp;mm de diamètre extérieur et 34&nbsp;mm de diamètre intérieur. Image tirée de mon film «&nbsp;Sous presse&nbsp;»."></div>
           <figcaption>Contrôle d'un joint à l'atelier de Gonfreville-l'Orcher, image de mon film «&nbsp;Sous presse&nbsp;».</figcaption>
         </figure>
+        <figure class="head-img fondu">
+          <img data-zoom src="assets/atelier-poste.jpg" width="633" height="756" loading="lazy" alt="Axel au poste de découpe de l'atelier d'Avritec, en train de placer une feuille de matériau sur la table.">
+          <figcaption>Moi au poste de découpe, à l'atelier.</figcaption>
+        </figure>
       </div>
       <div class="body">
         <p class="chapo">Avritec fabrique et distribue des joints et des solutions d'étanchéité. Ses clients sont des sites industriels de la pétrochimie, de la chimie, de l'agroalimentaire, du traitement de l'eau et du naval. L'entreprise compte une trentaine de salariés et quatre agences.</p>
@@ -770,6 +779,10 @@ footer { background: var(--film); color: var(--film-dim); padding: 0 0 clamp(2re
           <li>Je fais aussi des e-mailings clients et des vidéos produit (exemples ci-dessous).</li>
           <li>Avec mon tuteur, je crée des outils internes pour l'entreprise avec Claude Code&nbsp;: un calculateur de prix de vente, un outil RH et une plateforme d'évaluation des salariés (captures ci-dessous).</li>
         </ul>
+        <figure class="fig-pipe">
+          <div class="cadre"><img data-zoom src="assets/pipedrive-prospects.jpg" width="1400" height="679" loading="lazy" alt="Base de prospects d'Avritec dans Pipedrive&nbsp;: 34 prospects avec les étiquettes «&nbsp;À appeler&nbsp;» et «&nbsp;Relance&nbsp;». Noms et numéros floutés."></div>
+          <figcaption>La base de prospects dans Pipedrive&nbsp;: 34 prospects à appeler ou à relancer. Noms et numéros floutés.</figcaption>
+        </figure>
 
         <h3>Cinq exemples de mon travail</h3>
         <div class="preuves">
